@@ -9,6 +9,14 @@ import '@fortawesome/fontawesome-free-webfonts/css/fontawesome.css'
 import '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css'
 import '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css'
 import '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyB0bDoEZQz6SvsSj54Mifi-uTEIKQwxnc4',
+    libraries: 'places'
+  }
+})
 
 Vue.use(Vuetify)
 

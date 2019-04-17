@@ -17,6 +17,7 @@
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.10.6",
     "vuetify": "^1.5.7"
   },
   "devDependencies": {
