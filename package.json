@@ -11,10 +11,18 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^0.5.5",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.4.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-audio": "0.0.12",
+    "vue2-google-maps": "^0.10.6",
+    "vuetify": "^1.5.12",
+    "vuetify-audio": "0.0.8"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
   }
 }
