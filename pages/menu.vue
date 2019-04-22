@@ -6,7 +6,7 @@
         <base-selectmenu></base-selectmenu>
         <v-layout align-center justify-center row>
           <v-flex
-            v-for="(item, index) in menu"
+            v-for="(item, index) in menuRanking"
             :key="index"
           >
             <base-bread
@@ -21,7 +21,6 @@
   </v-app>
 </template>
 
-
 <script>
 import ToolBar from '~/components/ToolBar.vue'
 import BaseSelectmenu from '~/components/BaseSelectmenu.vue'
@@ -33,7 +32,7 @@ export default {
     BaseSelectmenu
   },
   asyncData({ env }) {
-    return { menu: env.menu }
+    return { menuRanking: env.menuRanking }
   },
 
 }

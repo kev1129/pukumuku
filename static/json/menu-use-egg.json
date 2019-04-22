@@ -1,0 +1,8 @@
+[
+    {"name": "たまごぱん", "price": "140", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "じゃがいもぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "焼そばぱん", "price": "150", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "ベーコンフランス", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "ウインナーぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "コーンぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"}
+]

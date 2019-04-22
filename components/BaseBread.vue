@@ -5,8 +5,8 @@
     class="card"
   >
     <v-img
-      :src="bread"
-      aspect-ratio="1"
+      :src="getUrl"
+      aspect-ratio="1.0"
     ></v-img>
     <v-card-title class="card_text">
       <div>
@@ -24,9 +24,17 @@ export default {
     breadUrl: String,
     breadPrice: Number
   },
+  // data からは画像が読み込める
+  // data () {
+  //   return {
+  //     getUrl: require('static/img/bread/kasi/meron.png')
+  //   }
+  // },
+  
+  // computedからだと読み込めない
   computed: {
-    bread: function () {
-      return require(breadUrl)
+    getUrl: function () {
+      return require(this.breadUrl)
     }
   }
 }

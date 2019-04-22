@@ -1,0 +1,6 @@
+[
+    {"name": "焼きそばぱん", "price": "150", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "つぶあんぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "こしあんぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "さつまいもぱん", "price": "130", "url": "/static/img/bread/souzai/zyagaimo.PNG"}
+]

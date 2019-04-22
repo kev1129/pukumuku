@@ -26,7 +26,6 @@
     </v-content>
   </v-app>
 </template>
-
     
 <script>
 import ToolBar from '~/components/ToolBar.vue'
@@ -43,8 +42,8 @@ export default {
     data () {
       return {
         notices: [
-          {image: 'assets/img/notice/1.jpg'},
-          {image: 'assets/img/notice/2.jpg'}
+          {image: 'static/img/notice/1.jpg'},
+          {image: 'static/img/notice/2.jpg'}
         ]
       }
     }
