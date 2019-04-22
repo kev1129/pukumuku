@@ -1,4 +1,15 @@
 import pkg from './package'
+const fs = require('fs');
+const CdJson = JSON.parse(fs.readFileSync('assets/json/cds.json'));
+const MenuJson = JSON.parse(fs.readFileSync('assets/json/menu.json'));
+const MenuNothingJson = JSON.parse(fs.readFileSync('assets/json/menu-nothing-milk-egg.json'));
+const MenuRankingJson = JSON.parse(fs.readFileSync('assets/json/menu-ranking.json'));
+const MenuBananaJson = JSON.parse(fs.readFileSync('assets/json/menu-use-banana.json'));
+const MenuEggJson = JSON.parse(fs.readFileSync('assets/json/menu-use-egg.json'));
+const MenuMilkJson = JSON.parse(fs.readFileSync('assets/json/menu-use-milk.json'));
+const MenuPeanutsJson = JSON.parse(fs.readFileSync('assets/json/menu-use-peanuts.json'));
+// const MenuSasumeJson = JSON.parse(fs.readFileSync('assets/json/menu-use-sasume.json'));
+const MenuWalnatJson = JSON.parse(fs.readFileSync('assets/json/menu-use-walnat.json'));
 
 export default {
   mode: 'universal',
@@ -70,7 +81,15 @@ export default {
   },
   vendor:["vue2-google-maps"],
   env: {
-    menu: {src:"~/assets/json/menu.json"},
-    cds: {src:"~/assets/json/cds.json"}
+    cds: CdJson,
+    menu: MenuJson,
+    menuRanking: MenuRankingJson,
+    menuNothing: MenuNothingJson,
+    menuBanana: MenuBananaJson,
+    menuEgg: MenuEggJson,
+    menuMilk: MenuMilkJson,
+    MenuPeanuts: MenuPeanutsJson,
+    // MenuSasume: MenuSasumeJson,
+    MenuWalnat: MenuWalnatJson
   }
 }

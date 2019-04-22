@@ -30,10 +30,10 @@ export default {
 		return {
 			siteTitle: 'PANKOUBOU PUKUMUKU',
 			navs: [
-				{title: 'プクムクについて', link: './about'},
+				{title: 'こだわり', link: './about'},
 				{title: 'メニュー', link: './menu'},
-				{title: 'CDとカバン', link: './item'},
-				{title: 'お店の情報', link: './info'}
+				{title: 'グッツ', link: './item'},
+				{title: '店舗情報', link: './info'}
 			]
 		}
 	}

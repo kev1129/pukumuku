@@ -5,13 +5,13 @@
     class="card"
   >
     <v-img
-      :src="url"
+      :src="bread"
       aspect-ratio="1"
     ></v-img>
     <v-card-title class="card_text">
       <div>
-        <h3 class="title">じゃがいも</h3>
-        <div class="price">¥400</div>
+        <h3 class="title">{{ breadName }}</h3>
+        <div class="price">¥{{ breadPrice }}</div>
       </div>
     </v-card-title>
   </v-card>
@@ -20,9 +20,14 @@
 <script>
 export default {
   props: {
-    title: String,
-    url: String,
-    price: String
+    breadName: String,
+    breadUrl: String,
+    breadPrice: Number
+  },
+  computed: {
+    bread: function () {
+      return require(breadUrl)
+    }
   }
 }
 </script>

@@ -1,0 +1,12 @@
+[
+    {"name": "クリームぱん", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 1},
+    {"name": "プクムクバーガー", "price": "300","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 2},
+    {"name": "たまごぱん", "price": "140","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 3},
+    {"name": "サバカツバーガー", "price": "280","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 4},
+    {"name": "じゃがいもぱん", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 5},
+    {"name": "きなこぱん", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 6},
+    {"name": "シナモンレーズン", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 7},
+    {"name": "トマトピザ", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 8},
+    {"name": "えびフランス", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 9},
+    {"name": "トマトぱん", "price": "120","url": "/assets/img/bread/souzai/zyagaimo.PNG", "rank": 10}
+]

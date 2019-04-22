@@ -4,8 +4,16 @@
     <v-content>
       <v-container>
         <v-layout align-center justify-center row>
-          <base-cd></base-cd>
-          <base-music></base-music>
+          <v-flex
+            v-for="(item, index) in cds"
+            :key="index"
+          >
+            <base-cd 
+              :cd-url="item.url"
+              :cd-title="item.title"
+            ></base-cd>
+            <base-music></base-music>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -21,6 +29,9 @@ export default {
     ToolBar,
     BaseCd,
     BaseMusic
-  }
+  },
+  asyncData({ env }) {
+    return { cds: env.cds }
+  },
 }
 </script>

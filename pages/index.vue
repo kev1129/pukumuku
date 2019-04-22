@@ -3,7 +3,6 @@
     <tool-bar></tool-bar>
     <v-content>
       <v-container>
-        <nuxt-link to="info">sss</nuxt-link>
       </v-container>
     </v-content>
   </v-app>

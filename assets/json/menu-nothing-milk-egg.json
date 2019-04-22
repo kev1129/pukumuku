@@ -1,0 +1,11 @@
+[
+    {"name": "プチぱん", "price": "50", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "プチレーズン", "price": "60", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "フランスぱん（大）", "price": "360", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "フランスぱん（小）", "price": "180", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "丸食ぱん", "price": "240", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "角食ぱん", "price": "240", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "つぶあん", "price": "130", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "こしあん", "price": "130", "url": "/assets/img/bread/souzai/zyagaimo.PNG"},
+    {"name": "シナモンロール", "price": "260", "url": "/assets/img/bread/souzai/zyagaimo.PNG"}
+]
