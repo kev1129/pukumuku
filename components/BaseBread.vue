@@ -24,20 +24,12 @@ export default {
     breadUrl: String,
     breadPrice: Number
   },
-  // data からは画像が読み込める
-  // data () {
-  //   return {
-  //     getUrl: require('static/img/bread/kasi/meron.png')
-  //   }
-  // },
-  
-  // computedからだと読み込めない
-  computed: {
-    getUrl: function () {
-      return require(this.breadUrl)
+  data () {
+    return {
+      getUrl: require(this.breadUrl)
     }
   }
-}
+  }
 </script>
 
 <style lang="scss" scoped>
