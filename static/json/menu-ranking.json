@@ -1,12 +1,12 @@
 [
-    {"name": "クリームぱん", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 1},
-    {"name": "プクムクバーガー", "price": "300","url": "static/img/bread/kasi/meron.png", "rank": 2},
-    {"name": "たまごぱん", "price": "140","url": "static/img/bread/kasi/meron.png", "rank": 3},
-    {"name": "サバカツバーガー", "price": "280","url": "static/img/bread/kasi/meron.png", "rank": 4},
-    {"name": "じゃがいもぱん", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 5},
-    {"name": "きなこぱん", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 6},
-    {"name": "シナモンレーズン", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 7},
-    {"name": "トマトピザ", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 8},
-    {"name": "えびフランス", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 9},
-    {"name": "トマトぱん", "price": "120","url": "static/img/bread/kasi/meron.png", "rank": 10}
+    {"name": "クリームぱん", "price": "120","url": "img/bread/kasi/meron.png", "rank": 1},
+    {"name": "プクムクバーガー", "price": "300","url": "img/bread/kasi/meron.png", "rank": 2},
+    {"name": "たまごぱん", "price": "140","url": "img/bread/kasi/meron.png", "rank": 3},
+    {"name": "サバカツバーガー", "price": "280","url": "img/bread/kasi/meron.png", "rank": 4},
+    {"name": "じゃがいもぱん", "price": "120","url": "img/bread/kasi/meron.png", "rank": 5},
+    {"name": "きなこぱん", "price": "120","url": "img/bread/kasi/meron.png", "rank": 6},
+    {"name": "シナモンレーズン", "price": "120","url": "img/bread/kasi/meron.png", "rank": 7},
+    {"name": "トマトピザ", "price": "120","url": "img/bread/kasi/meron.png", "rank": 8},
+    {"name": "えびフランス", "price": "120","url": "img/bread/kasi/meron.png", "rank": 9},
+    {"name": "トマトぱん", "price": "120","url": "img/bread/kasi/meron.png", "rank": 10}
 ]
