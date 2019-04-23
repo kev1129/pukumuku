@@ -5,7 +5,7 @@
     class="card"
   >
     <v-img
-      :src="getUrl"
+      :src="breadUrl"
       aspect-ratio="1.0"
     ></v-img>
     <v-card-title class="card_text">
@@ -24,12 +24,7 @@ export default {
     breadUrl: String,
     breadPrice: Number
   },
-  data () {
-    return {
-      getUrl: this.breadUrl
-    }
-  }
-  }
+}
 </script>
 
 <style lang="scss" scoped>
