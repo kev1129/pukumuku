@@ -10,6 +10,7 @@ const MenuMilkJson = JSON.parse(fs.readFileSync('static/json/menu-use-milk.json'
 const MenuPeanutsJson = JSON.parse(fs.readFileSync('static/json/menu-use-peanuts.json'));
 // const MenuSasumeJson = JSON.parse(fs.readFileSync('assets/json/menu-use-sasume.json'));
 const MenuWalnatJson = JSON.parse(fs.readFileSync('static/json/menu-use-walnat.json'));
+const NoticeJson = JSON.parse(fs.readFileSync('static/json/notice.json'));
 
 export default {
   mode: 'universal',
@@ -88,8 +89,9 @@ export default {
     menuBanana: MenuBananaJson,
     menuEgg: MenuEggJson,
     menuMilk: MenuMilkJson,
-    MenuPeanuts: MenuPeanutsJson,
+    menuPeanuts: MenuPeanutsJson,
     // MenuSasume: MenuSasumeJson,
-    MenuWalnat: MenuWalnatJson
+    menuWalnat: MenuWalnatJson,
+    notice: NoticeJson
   }
 }

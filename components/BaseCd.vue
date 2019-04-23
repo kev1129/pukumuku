@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-img
-      :src="url"
+      :src="cdUrl"
       aspect-ratio="1"
     >
     </v-img>
@@ -18,11 +18,6 @@ export default {
   props: {
     cdTitle: String,
     cdUrl: String
-  },
-  computed: {
-    url: function () {
-      return require(cdUrl);
-    }
   }
 }
 </script>

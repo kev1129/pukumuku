@@ -1,4 +1,4 @@
 [
-  {"title": "プクムクズ",  "url": "static/img/cd/cd.jpg"},
-  {"title": "プクムクズ",  "url": "static/img/cd/cd.jpg"}
+  {"title": "プクムクズ1",  "url": "img/cd/cd.jpg", "mp3": "mp3/1.mp3"},
+  {"title": "プクムクズ2",  "url": "img/cd/cd.jpg", "mp3": "mp3/2.mp3"}
 ]

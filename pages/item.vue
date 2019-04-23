@@ -12,7 +12,9 @@
               :cd-url="item.url"
               :cd-title="item.title"
             ></base-cd>
-            <base-music></base-music>
+            <base-music
+              :cd-mp3="item.mp3"
+            ></base-music>
           </v-flex>
         </v-layout>
       </v-container>

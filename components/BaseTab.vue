@@ -9,13 +9,8 @@
 <script>
 export default {
   props: {
-    tabMenu: String,
-    id: Number
-  },
-  // methods: {
-  //   selectedGenre: function() {
-  //     this.$emit('selected-genre', id)
-  //   }
-  // }
+    tabTitle: String,
+    tabId: Number
+  }
 }
 </script>

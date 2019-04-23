@@ -23,7 +23,7 @@ export default {
     breadName: String,
     breadUrl: String,
     breadPrice: Number
-  },
+  }
 }
 </script>
 

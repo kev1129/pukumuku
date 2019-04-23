@@ -2,33 +2,83 @@
   <v-app>
     <tool-bar></tool-bar>
     <v-content>
+      <base-tab
+        v-for="(item, index) in tabs"
+        :key="index"
+        :tab-title="item.title"
+        :tab-id="item.id"
+      ></base-tab>
       <v-container>
-        <v-layout>
-          <v-flex>
-            <base-tab
-              v-for="item in tabs"
-              :key="item.id"
-              :tab-title="item.title"
-              :tab-id="item.id"
-              v-model="currentId"
-              class="tabs"
-            ></base-tab>
+        <!-- genre 1 -->
+        <v-layout v-if="currentId == '1'" align-center justify-center row wrap>
+          <v-flex
+            v-for="(item, index) in menuRanking"
+            :key="index"
+            xs4
+          >
+            <base-bread
+              :bread-name="item.name"
+              :bread-price="item.price"
+              :bread-url="item.url"
+            ></base-bread>
           </v-flex>
         </v-layout>
-        <div class="content">
-          <v-layout align-center justify-center row>
-            <v-flex
-              v-for="(item, index) in menuRanking"
-              :key="index"
-            >
-              <base-bread
-                :bread-name="item.name"
-                :bread-price="item.price"
-                :bread-url="item.url"
-              ></base-bread>
-            </v-flex>
-          </v-layout>
-        </div>
+        <!-- genre 2 -->
+        <v-layout v-if="currentId == '3'" align-center justify-center row wrap>
+          <v-flex
+            v-for="(item, index) in menuRanking"
+            :key="index"
+            xs4
+          >
+            <base-bread
+              :bread-name="item.name"
+              :bread-price="item.price"
+              :bread-url="item.url"
+            ></base-bread>
+          </v-flex>
+        </v-layout>
+        <!-- genre 3 -->
+        <v-layout v-if="currentId == '2'" align-center justify-center row wrap>
+          <v-flex
+            v-for="(item, index) in menuRanking"
+            :key="index"
+            xs4
+          >
+            <base-bread
+              :bread-name="item.name"
+              :bread-price="item.price"
+              :bread-url="item.url"
+            ></base-bread>
+          </v-flex>
+        </v-layout>
+        <!-- genre 4 -->
+        <v-layout v-if="currentId == '4'" align-center justify-center row wrap>
+          <v-flex
+            v-for="(item, index) in menuRanking"
+            :key="index"
+            xs4
+          >
+            <base-bread
+              :bread-name="item.name"
+              :bread-price="item.price"
+              :bread-url="item.url"
+            ></base-bread>
+          </v-flex>
+        </v-layout>
+        <!-- genre 5 -->
+        <v-layout v-if="currentId == '5'" align-center justify-center row wrap>
+          <v-flex
+            v-for="(item, index) in menuRanking"
+            :key="index"
+            xs4
+          >
+            <base-bread
+              :bread-name="item.name"
+              :bread-price="item.price"
+              :bread-url="item.url"
+            ></base-bread>
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-content>
   </v-app>
@@ -56,14 +106,21 @@ export default {
       ]
     }
   },
-  computed: {
-    current() {
-      return this.tabs.find(el => el.id === this.currentId) || {}
-    }
-  },
+  // computed: {
+  //   current() {
+  //     return this.tabs.find(el => el.id === this.currentId) || {}
+  //   }
+  // },
   asyncData({ env }) {
-    return { menuRanking: env.menuRanking }
-  },
-
+    return {
+      menuRanking: env.menuRanking,
+      menu: env.menu,
+      menuNothing: env.menuNothing,
+      menuEgg: env.menuEgg,
+      menuMilk: env.menuMilk,
+      menuPeanuts: env.menuPeanuts,
+      menuWalnat: env.menuWalnat
+    }
+  }
 }
 </script>

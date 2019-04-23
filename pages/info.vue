@@ -3,7 +3,8 @@
     <tool-bar></tool-bar>
     <v-content>
       <v-container>
-        <v-layout align-center justify-center wrap column>
+        <v-layout column>
+          <!-- info and map -->
           <v-layout justify-center wrap row>
             <v-flex xs11 sm10 md6 lg5>
               <base-info></base-info>
@@ -12,13 +13,13 @@
               <base-map></base-map>
             </v-flex>
           </v-layout>
-          <v-layout align-center justify-center wrap row="">
+          <!-- notice -->
+          <v-layout align-center justify-center wrap row>
             <v-flex
-              xs11 sm10 md6 lg5
-              v-for="(item, index) in notices"
+              v-for="(item, index) in notice"
               :key="index"
             >
-              <base-notice :notice-image="item.image"></base-notice>
+              <base-notice :notice-url="item.url"></base-notice>
             </v-flex>
           </v-layout>
         </v-layout>
@@ -33,19 +34,14 @@ import BaseInfo from '~/components/BaseInfo.vue'
 import BaseMap from '~/components/BaseMap.vue'
 import BaseNotice from '~/components/BaseNotice.vue'
 export default {
-    components: {
-        ToolBar,
-        BaseInfo,
-        BaseMap,
-        BaseNotice
-    },
-    data () {
-      return {
-        notices: [
-          {image: 'static/img/notice/1.jpg'},
-          {image: 'static/img/notice/2.jpg'}
-        ]
-      }
-    }
+components: {
+  ToolBar,
+  BaseInfo,
+  BaseMap,
+  BaseNotice
+},
+asyncData({ env }) {
+  return { notice: env.notice }
+  }
 }
 </script>
