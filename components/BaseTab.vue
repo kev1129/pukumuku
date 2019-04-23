@@ -1,8 +1,6 @@
 <template>
   <v-tabs fixed-tabs>
-    <v-tab
-      v-on:click="selectedGenre"
-    >
+    <v-tab>
       {{ tabTitle }}
     </v-tab>
   </v-tabs>
@@ -14,10 +12,10 @@ export default {
     tabMenu: String,
     id: Number
   },
-  methods: {
-    selectedGenre: function() {
-      this.$emit('selected-genre', id)
-    }
-  }
+  // methods: {
+  //   selectedGenre: function() {
+  //     this.$emit('selected-genre', id)
+  //   }
+  // }
 }
 </script>

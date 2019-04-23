@@ -2,7 +2,7 @@
   <v-card>
     <v-img
       :src="image"
-      aspect-ratio="0.6"
+      aspect-ratio="1"
     ></v-img>
   </v-card>
 </template>
@@ -12,9 +12,9 @@ export default {
   props: {
     noticeImage: String
   },
-  computed: {
-    image: function () {
-      return require(noticeImage)
+  data () {
+    return {
+      image: require(this.noticeImage)
     }
   }
 }

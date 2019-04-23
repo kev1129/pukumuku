@@ -11,7 +11,6 @@
               :tab-title="item.title"
               :tab-id="item.id"
               v-model="currentId"
-              @select-genre="selectGenre"
               class="tabs"
             ></base-tab>
           </v-flex>
