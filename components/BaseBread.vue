@@ -26,7 +26,7 @@ export default {
   },
   data () {
     return {
-      getUrl: require(this.breadUrl)
+      getUrl: this.breadUrl
     }
   }
   }
