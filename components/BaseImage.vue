@@ -1,8 +1,8 @@
 <template>
-  <v-card>
+  <v-card class="img">
     <v-img
       :src="imageUrl"
-      aspect-ratio="1"
+      aspect-ratio="0.75"
     ></v-img>
   </v-card>
 </template>
@@ -14,3 +14,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.img {
+ padding: 0;
+ margin: 0;
+}
+</style>

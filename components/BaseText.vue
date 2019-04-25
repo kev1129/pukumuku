@@ -12,6 +12,8 @@ export default {
 
 <style lang="scss" scoped>
 .string {
+    display: inline-block;
+    text-align: center;
     font-size: 1.6rem;
 }
 </style>

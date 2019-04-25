@@ -3,7 +3,7 @@
     :center="{lat:35.682181, lng:139.669296}"
     :zoom="17"
     map-type-id="terrain"
-    style="width: 500px; height: 300px;"
+    :style="{width: mapWidth + 'px',height: mapHeight + 'px'}"
   >
     <GmapMarker
       :key="index"
@@ -22,8 +22,13 @@ export default {
     return {
       markers: [
         {position: {lat:35.682181, lng:139.669296}},
-      ]
+      ],
+      mapHeight: 500,
+      mapWidth: 1000
     };
+  },
+  created() {
+    this.mapWidth = window.innerWidth;
   }
 };
 </script>
