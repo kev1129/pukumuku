@@ -11,9 +11,13 @@ const MenuPeanutsJson = JSON.parse(fs.readFileSync('static/json/menu-use-peanuts
 // const MenuSasumeJson = JSON.parse(fs.readFileSync('assets/json/menu-use-sasume.json'));
 const MenuWalnatJson = JSON.parse(fs.readFileSync('static/json/menu-use-walnat.json'));
 const NoticeJson = JSON.parse(fs.readFileSync('static/json/notice.json'));
+const flyerJson = JSON.parse(fs.readFileSync('static/json/flyer.json'));
 
 export default {
-  mode: 'universal',
+  mode: [
+    'universal',
+    'nuxt-fontawesome'
+  ],
 
   /*
   ** Headers of the page
@@ -92,6 +96,15 @@ export default {
     menuPeanuts: MenuPeanutsJson,
     // MenuSasume: MenuSasumeJson,
     menuWalnat: MenuWalnatJson,
-    notice: NoticeJson
+    notice: NoticeJson,
+    flyer: flyerJson
+  },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
   }
 }

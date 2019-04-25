@@ -22,7 +22,7 @@ export default {
   props: {
     breadName: String,
     breadUrl: String,
-    breadPrice: Number
+    breadPrice: String
   }
 }
 </script>

@@ -52,4 +52,7 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+.tool-bar {
+  margin-top: 40px;
+}
 </style>

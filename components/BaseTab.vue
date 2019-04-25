@@ -1,16 +1,25 @@
 <template>
-  <v-tabs fixed-tabs>
-    <v-tab>
-      {{ tabTitle }}
-    </v-tab>
-  </v-tabs>
+<div>
+    <v-btn
+      @click="$emit('input', id)"
+      class="btn"
+    >
+      {{ label }}
+    </v-btn>
+</div>
 </template>
 
 <script>
 export default {
   props: {
-    tabTitle: String,
-    tabId: Number
+    label: String,
+    id: Number
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.btn {
+  display: inline-block;
+}
+</style>

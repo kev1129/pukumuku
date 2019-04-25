@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <tool-bar></tool-bar>
+    <tool-bar class="tool-bar"></tool-bar>
     <v-content>
       <v-container>
         <v-layout column>
@@ -19,7 +19,7 @@
               v-for="(item, index) in notice"
               :key="index"
             >
-              <base-notice :notice-url="item.url"></base-notice>
+              <base-image :image-url="item.url"></base-image>
             </v-flex>
           </v-layout>
         </v-layout>
@@ -32,16 +32,23 @@
 import ToolBar from '~/components/ToolBar.vue'
 import BaseInfo from '~/components/BaseInfo.vue'
 import BaseMap from '~/components/BaseMap.vue'
-import BaseNotice from '~/components/BaseNotice.vue'
+import BaseImage from '~/components/BaseImage.vue'
 export default {
-components: {
-  ToolBar,
-  BaseInfo,
-  BaseMap,
-  BaseNotice
-},
-asyncData({ env }) {
-  return { notice: env.notice }
-  }
+  layouts: 'default',
+  components: {
+    ToolBar,
+    BaseInfo,
+    BaseMap,
+    BaseImage
+  },
+  asyncData({ env }) {
+    return { notice: env.notice }
+    }
 }
 </script>
+
+<style lang="scss" scoped>
+.tool-bar {
+  margin-top: 40px;
+}
+</style>

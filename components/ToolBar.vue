@@ -2,6 +2,7 @@
   <v-toolbar
 		class="tool-bar"
 		flat
+		style="margin-top: 24px;"
 	>
     <v-toolbar-title class="nav-title black--text">
 			<nuxt-link to="/" class="link">
@@ -30,7 +31,6 @@ export default {
 		return {
 			siteTitle: 'PANKOUBOU PUKUMUKU',
 			navs: [
-				{title: 'こだわり', link: './about'},
 				{title: 'メニュー', link: './menu'},
 				{title: 'グッツ', link: './item'},
 				{title: '店舗情報', link: './info'}
@@ -60,6 +60,7 @@ export default {
 	border-radius: 50px;
 	max-width: 90vw;
 	margin: auto;
+	background: #fff;
 
 	.nav-title {
 		color: #000;

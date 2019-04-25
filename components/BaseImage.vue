@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-img
-      :src="noticeUrl"
+      :src="imageUrl"
       aspect-ratio="1"
     ></v-img>
   </v-card>
@@ -10,7 +10,7 @@
 <script>
 export default {
   props: {
-    noticeUrl: String
+    imageUrl: String
   }
 }
 </script>
