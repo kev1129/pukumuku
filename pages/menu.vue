@@ -1,8 +1,5 @@
 <template>
-  <v-app>
-    <tool-bar></tool-bar>
-    <v-content>
-      <v-container>
+<div>
         <!-- tab -->
         <v-layout  align-center justify-center row>
           <v-flex
@@ -127,9 +124,7 @@
             <base-image :image-url="item.url"></base-image>
           </v-flex>
         </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
+        </div>
 </template>
 
 <script>

@@ -1,8 +1,5 @@
 <template>
-  <v-app>
-    <tool-bar></tool-bar>
-    <v-content>
-      <v-container grid-list-xl>
+<div>
         <base-subtitle :sub-title="cdTitle"></base-subtitle>
         <v-layout align-center justify-center row>
           <v-flex
@@ -18,9 +15,7 @@
             ></base-music>
           </v-flex>
         </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
+</div>
 </template>
 
 <script>

@@ -1,8 +1,4 @@
 <template>
-  <v-app>
-    <tool-bar class="tool-bar"></tool-bar>
-    <v-content>
-      <v-container>
         <v-layout column>
           <!-- info and map -->
           <v-layout justify-center wrap row>
@@ -23,9 +19,6 @@
             </v-flex>
           </v-layout>
         </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
 </template>
     
 <script>
