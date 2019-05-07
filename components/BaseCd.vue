@@ -5,18 +5,12 @@
       aspect-ratio="1"
     >
     </v-img>
-    <v-card-title>
-      <div>
-        <h3 class="cd_title">{{ cdTitle }}</h3>
-      </div>
-    </v-card-title>
   </v-card>
 </template>
 
 <script>
 export default {
   props: {
-    cdTitle: String,
     cdUrl: String
   }
 }

@@ -1,20 +1,27 @@
 <template>
-  <v-card
-    width=300
-    tile
-    class="card"
-  >
-    <v-img
-      :src="breadUrl"
-      aspect-ratio="1.0"
-    ></v-img>
-    <v-card-title class="card_text">
-      <div>
-        <h3 class="title">{{ breadName }}</h3>
-        <div class="price">¥{{ breadPrice }}</div>
-      </div>
-    </v-card-title>
-  </v-card>
+  <v-hover>
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="white"
+      flat
+    >
+      <v-img
+        :aspect-ratio="1"
+        :src="breadUrl"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out red v-card--reveal white--text"
+            style="height: 100%;"
+          >
+            <h2 class="name">{{ breadName }}</h2>
+          </div>
+        </v-expand-transition>
+      </v-img>
+    </v-card>
+  </v-hover>
 </template>
 
 <script>
@@ -22,32 +29,23 @@ export default {
   props: {
     breadName: String,
     breadUrl: String,
-    breadPrice: String
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.card {
-  border-radius: 50px;
-  text-align: center;
-  .card_text {
-    display: block;
-    text-align: center;
-    // padding: 0;
-  .title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    letter-spacing: 0.15rem;
-  }
-  .price {
-    font-size: 1.4rem;
-    color: red;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-  }
-  }
-}
 
+<style>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
+}
+.name {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+}
 </style>

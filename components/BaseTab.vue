@@ -1,12 +1,12 @@
 <template>
-<div>
-    <v-btn
+  <v-tabs fixed-tabs>
+    <v-tab
       @click="$emit('input', id)"
       class="btn"
     >
       {{ label }}
-    </v-btn>
-</div>
+    </v-tab>
+  </v-tabs>
 </template>
 
 <script>

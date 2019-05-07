@@ -1,20 +1,27 @@
 <template>
   <v-app>
     <tool-bar></tool-bar>
-    <base-title :title="title"></base-title>
-    <base-tab
-      v-for="item in tabs"
-      :key="item.id"
-      v-bind="item"
-      v-model="currentId"
-    ></base-tab>
     <v-content>
       <v-container>
+        <!-- tab -->
+        <v-layout  align-center justify-center row>
+          <v-flex
+            v-for="item in tabs"
+            :key="item.id"
+          >
+            <base-tab
+              v-bind="item"
+              v-model="currentId"
+            ></base-tab>
+          </v-flex>
+        </v-layout>
+        <!-- test -->
+        <!-- menu -->
         <v-layout align-center justify-center row wrap>
           <v-flex
             v-for="(item, index) in current"
             :key="index"
-            xs4
+            xs6 sm4 md3 lg2
           >
             <base-bread
               :bread-name="item.name"
