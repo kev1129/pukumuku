@@ -1,34 +1,55 @@
 <template>
-  <v-layout>
-    <v-flex xs12 sm6 offset-sm3>
-      <v-card>
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-          aspect-ratio="2.75"
-        ></v-img>
-
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-            <div> {{ card_text }} </div>
-          </div>
-        </v-card-title>
-
-        <v-card-actions>
-          <v-btn flat color="orange">Share</v-btn>
-          <v-btn flat color="orange">Explore</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-card
+    class="card"
+    flat
+  >
+    <v-img
+      :src="breadUrl"
+      aspect-ratio="1.0"
+      class="card_img"
+    ></v-img>
+    <v-card-title class="card__text">
+      <div>
+        <h3 class="card__text_title">{{ breadName }}</h3>
+        <div class="card__text_price">¥<span class="card__text_price_big">{{ breadPrice }}</span></div>
+      </div>
+    </v-card-title>
+  </v-card>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        card_text: 'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
-      }
+export default {
+  props: {
+    breadName: String,
+    breadUrl: String,
+    breadPrice: String
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.card {
+  max-width: 240px;
+  border-radius: 0;
+  text-align: left;
+  .card_img {
+    margin-bottom: 12px;
+  }
+  .card__text {
+    padding: 0;
+    .card__text_title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0;
+    }
+    .card__text_price {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .card__text_price_big {
+      font-size: 1.8rem;
     }
   }
-</script>
+}
+
+</style>

@@ -1,130 +1,7 @@
 <template>
-<div>
-        <!-- tab -->
-        <v-layout  align-center justify-center row>
-          <v-flex
-            v-for="item in tabs"
-            :key="item.id"
-          >
-            <base-tab
-              v-bind="item"
-              v-model="currentId"
-            ></base-tab>
-          </v-flex>
-        </v-layout>
-        <!-- test -->
-        <!-- menu -->
-        <v-layout align-center justify-center row wrap>
-          <v-flex
-            v-for="(item, index) in current"
-            :key="index"
-            xs6 sm4 md3 lg2
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-        </v-layout>
-        <!-- allergy -->
-        <v-layout v-if="currentId === 4" align-center justify-center row wrap>
-        <h2>卵・牛乳不使用</h2>
-          <v-flex
-            v-for="(item, index) in nothing"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2>牛乳使用</h2>
-          <v-flex
-            v-for="(item, index) in milk"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2>卵使用</h2>
-          <v-flex
-            v-for="(item, index) in egg"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2></h2>
-          <v-flex
-            v-for="(item, index) in nothing"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2>ピーナッツ使用</h2>
-          <v-flex
-            v-for="(item, index) in peanuts"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2>バナナ使用</h2>
-          <v-flex
-            v-for="(item, index) in banana"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-          <h2>クルミ使用</h2>
-          <v-flex
-            v-for="(item, index) in walnat"
-            :key="index"
-            xs4
-          >
-            <base-bread
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-bread>
-          </v-flex>
-        </v-layout>
-        <v-layout v-if="currentId === 5" align-center justify-center row wrap>
-        <h2>チラシ</h2>
-          <v-flex
-            v-for="(item, index) in flyer"
-            :key="index"
-            xs4
-          >
-            <base-image :image-url="item.url"></base-image>
-          </v-flex>
-        </v-layout>
-        </div>
+  <v-container>
+    <base-title class="section_title" :title="menuTitle"></base-title>
+  </v-container>
 </template>
 
 <script>
@@ -145,8 +22,7 @@ export default {
   },
   data () {
     return {
-      currentId: 1,
-      title: 'メニュー',
+      menuTitle: 'MENU',
       tabs: [
         {id: 1, label: 'そうざいぱん'},
         {id: 2, label: 'かしぱん'},

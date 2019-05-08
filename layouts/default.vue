@@ -21,16 +21,16 @@ export default {
 </script>
 
 
-<style>
-/* google fonts */
+<style lang="scss">
+/* color */
 
-.fonts_text { font-family: "M PLUS 1p"; }
-.fonts_title { font-family: 'Anton', sans-serif; }
+$font-orange: rgba(255, 69, 0, 1);
+
 
 /* common */
 
 html {
-  font-family: "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Francois One', 'Sawarabi Gothic', "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
@@ -54,5 +54,13 @@ html {
 }
 .theme--light.application {
   background: #fff;
+}
+/* セクション毎に .section をつけ、margin-bottom を調整  */
+.section {
+  margin-bottom: 64px;
+}
+/* セクションごとのタイトルに .section_title をつけて、marginを調整 */
+.section_title {
+  margin-bottom: 16px;
 }
 </style>

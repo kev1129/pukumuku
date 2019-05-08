@@ -1,5 +1,5 @@
 <template>
-    <h1 class="string">{{ title }}</h1>
+    <h1 class="base_title">{{ title }}</h1>
 </template>
 
 <script>
@@ -11,7 +11,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.string {
+.base_title {
+    font-family: 'Francois One';
+    letter-spacing: .3rem;
     font-size: 3.2rem;
+    color: #fff;
+    background: #000;
+    padding-left: 24px;
 }
 </style>

@@ -1,24 +1,27 @@
 <template>
-        <v-layout column>
-          <!-- info and map -->
-          <v-layout justify-center wrap row>
-            <v-flex xs11 sm10 md6 lg5>
-              <base-info></base-info>
-            </v-flex>
-            <v-flex x11 sm10 md6 lg5>          
-              <base-map></base-map>
-            </v-flex>
-          </v-layout>
-          <!-- notice -->
-          <v-layout align-center justify-center wrap row>
-            <v-flex
-              v-for="(item, index) in notice"
-              :key="index"
-            >
-              <base-image :image-url="item.url"></base-image>
-            </v-flex>
-          </v-layout>
-        </v-layout>
+  <v-container>
+    <base-title class="section_title" :title="infoTitle"></base-title>
+    <v-layout column>
+      <!-- info and map -->
+      <v-layout justify-center wrap row>
+        <v-flex xs11 sm10 md6 lg5>
+          <base-info></base-info>
+        </v-flex>
+        <v-flex x11 sm10 md6 lg5>          
+          <base-map></base-map>
+        </v-flex>
+      </v-layout>
+      <!-- notice -->
+      <v-layout align-center justify-center wrap row>
+        <v-flex
+          v-for="(item, index) in notice"
+          :key="index"
+        >
+          <base-image :image-url="item.url"></base-image>
+        </v-flex>
+      </v-layout>
+    </v-layout>
+  </v-container>
 </template>
     
 <script>
@@ -33,6 +36,11 @@ export default {
     BaseInfo,
     BaseMap,
     BaseImage
+  },
+  data () {
+    return {
+      infoTitle: 'INFOMATION'
+    }
   },
   asyncData({ env }) {
     return { notice: env.notice }

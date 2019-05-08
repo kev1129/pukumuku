@@ -14,4 +14,7 @@ export default {
 .string {
     font-size: 2.4rem;
 }
+.font_red {
+    color: rgba(255, 69, 0, 1);
+}
 </style>

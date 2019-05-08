@@ -1,21 +1,15 @@
 <template>
-<div>
-        <base-subtitle :sub-title="cdTitle"></base-subtitle>
-        <v-layout align-center justify-center row>
-          <v-flex
-            v-for="(item, index) in cds"
-            :key="index"
-            xs11 sm10 md6 lg5
-          >
-            <base-cd 
-              :cd-url="item.url"
-            ></base-cd>
-            <base-music
-              :cd-mp3="item.mp3"
-            ></base-music>
-          </v-flex>
-        </v-layout>
-</div>
+  <v-container>
+    <base-title class="section_title" :title="menuTitle"></base-title>
+    <v-layout align-center justify-center row wrap>
+      <v-flex
+        v-for="(item, index) in cds"
+        :key="index"
+        xs11 sm10 md6 lg5
+      >
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

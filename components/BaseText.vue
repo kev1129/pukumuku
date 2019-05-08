@@ -1,5 +1,5 @@
 <template>
-    <h1 class="string">{{ text }}</h1>
+    <p class="text">{{ text }}</p>
 </template>
 
 <script>
@@ -11,7 +11,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.string {
-    font-size: 1.6rem;
+.text {
+    font-family: 'Sawarabi Gothic';
+    font-size: 1.1rem;
+    letter-spacing: 0;
 }
 </style>

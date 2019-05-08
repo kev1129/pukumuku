@@ -8,7 +8,7 @@ const MenuBananaJson = JSON.parse(fs.readFileSync('static/json/menu-use-banana.j
 const MenuEggJson = JSON.parse(fs.readFileSync('static/json/menu-use-egg.json'));
 const MenuMilkJson = JSON.parse(fs.readFileSync('static/json/menu-use-milk.json'));
 const MenuPeanutsJson = JSON.parse(fs.readFileSync('static/json/menu-use-peanuts.json'));
-// const MenuSasumeJson = JSON.parse(fs.readFileSync('assets/json/menu-use-sasume.json'));
+const MenuTopJson = JSON.parse(fs.readFileSync('static/json/menu-top.json'));
 const MenuWalnatJson = JSON.parse(fs.readFileSync('static/json/menu-use-walnat.json'));
 const NoticeJson = JSON.parse(fs.readFileSync('static/json/notice.json'));
 const flyerJson = JSON.parse(fs.readFileSync('static/json/flyer.json'));
@@ -34,8 +34,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity: 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin: 'anonymous' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Anton'},
     ]
   },
 
@@ -61,7 +59,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    'nuxt-webfontloader'
   ],
 
   /*
@@ -96,6 +95,7 @@ export default {
     menuEgg: MenuEggJson,
     menuMilk: MenuMilkJson,
     menuPeanuts: MenuPeanutsJson,
+    menuTop: MenuTopJson,
     // MenuSasume: MenuSasumeJson,
     menuWalnat: MenuWalnatJson,
     notice: NoticeJson,
@@ -108,5 +108,15 @@ export default {
         icons: ['fas']
       }
     ]
-  }
+  },
+  webfontloader: {
+    google: {
+      families: [
+        // title EN
+        'Francois+One',
+        // text JP
+        'Sawarabi+Gothic'
+      ]
+    }
+  },
 }
