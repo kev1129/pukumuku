@@ -23,12 +23,9 @@ export default {
 
 <style lang="scss">
 /* color */
-
 $font-orange: rgba(255, 69, 0, 1);
 
-
 /* common */
-
 html {
   font-family: 'Francois One', 'Sawarabi Gothic', "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

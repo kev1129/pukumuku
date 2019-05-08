@@ -39,7 +39,7 @@
       <base-induce v-bind="musicInduce"></base-induce>
     </div>
     <!-- infomation -->
-    <div class="section infomation">
+    <div id="googlemap" class="section infomation">
       <base-title class="section_title" :title="infoTitle"></base-title>
       <v-container grid-list-xl>
         <v-layout align-center justify-center row wrap>
@@ -54,7 +54,7 @@
       <v-container grid-list-xl>
         <v-layout align-start>
           <v-flex xs12 sm12 md12 lg12>
-            <base-map></base-map>
+            <base-map :map-width="mapWidth" :map-height="mapHeight"></base-map>
           </v-flex>
         </v-layout>
       </v-container>
@@ -103,6 +103,18 @@ export default {
       infoTitle: 'INFTOMATION',
       infoText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
       infoInduce: {text: 'お知らせはこちら', link: 'info'},
+    }
+  },
+  created() {
+    if (process.browser) {
+      // test console.log
+      console.log('hello');
+
+      let elementWidth = window.document.getElementById("googlemap").clientWidth;
+      this.mapWidth = this.elementWidth;
+      this.mapHeight = this.mapWidth * 0.75;
+      console.log(this.mapWidth);
+      console.log(this.mapHeight);
     }
   },
   asyncData({ env }) {
