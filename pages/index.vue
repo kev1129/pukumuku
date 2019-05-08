@@ -39,7 +39,7 @@
       <base-induce v-bind="musicInduce"></base-induce>
     </div>
     <!-- infomation -->
-    <div id="googlemap" class="section infomation">
+    <div class="section infomation">
       <base-title class="section_title" :title="infoTitle"></base-title>
       <v-container grid-list-xl>
         <v-layout align-center justify-center row wrap>
@@ -51,12 +51,12 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container grid-list-xl>
-        <v-layout align-start>
-          <v-flex xs12 sm12 md12 lg12>
-            <base-map :map-width="mapWidth" :map-height="mapHeight"></base-map>
-          </v-flex>
-        </v-layout>
+      <v-container>
+            <v-layout v-resize="onResize" align-center justify-center>
+              <v-flex xs12 sm12 md12 lg12>
+                <base-map :map-width="windowSize.x" :map-height="windowSize.y"></base-map>
+              </v-flex>
+            </v-layout>
       </v-container>
       <base-induce v-bind="infoInduce"></base-induce>
     </div>
@@ -76,6 +76,7 @@ import BaseInduce from '~/components/BaseInduce.vue'
 
 
 export default {
+
   components: {
     BaseTitle,
     BaseSubtitle,
@@ -89,6 +90,10 @@ export default {
   },
   data () {
     return {
+      windowSize: {
+        x: 0,
+        y: 0,
+      },
       isRed: true,
       menuTitle: 'MENU',
       menuText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
@@ -105,16 +110,12 @@ export default {
       infoInduce: {text: 'お知らせはこちら', link: 'info'},
     }
   },
-  created() {
-    if (process.browser) {
-      // test console.log
-      console.log('hello');
-
-      let elementWidth = window.document.getElementById("googlemap").clientWidth;
-      this.mapWidth = this.elementWidth;
-      this.mapHeight = this.mapWidth * 0.75;
-      console.log(this.mapWidth);
-      console.log(this.mapHeight);
+  mounted () {
+    this.onResize()
+  },
+  methods: {
+    onResize () {
+      this.windowSize = { x: window.innerWidth * 0.7, y: window.innerHeight * 0.7}
     }
   },
   asyncData({ env }) {
