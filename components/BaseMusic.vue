@@ -1,16 +1,16 @@
 <template>
-  <vuetify-audio :file="cdMp3" :ended="audioFinish"></vuetify-audio>
+  <vuetify-audio :file="file" :ended="audioFinish"></vuetify-audio>
 </template>
 
 <script>
-import VuetifyAudio from 'vuetify-audio';
+import VuetifyAudio from 'vuetify-audio'
 
 export default {
   props: {
-    cdMp3: String
+    file: String
   },
   components: {
-    'vuetify-audio': VuetifyAudio
+    VuetifyAudio
   },
   // If you want to use ended callback add below code
   methods: {

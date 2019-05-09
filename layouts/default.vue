@@ -54,7 +54,7 @@ html {
 }
 /* セクション毎に .section をつけ、margin-bottom を調整  */
 .section {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 /* セクションごとのタイトルに .section_title をつけて、marginを調整 */
 .section_title {

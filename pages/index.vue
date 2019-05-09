@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="container">
     <!-- menu -->
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
@@ -99,7 +99,7 @@ export default {
       menuText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
       menuInduce: {text: 'メニュー & アレルギー', link: 'menu'},
       musicTitle: 'MUSIC',
-      musicText: '南台の伝説のバンド「プクムクズ」。店主とその友達、お客さんがバンドメンバー。パン祭りに良く出没する。',
+      musicText: '南台の伝説のバンド「プクムクズ」。バンドメンバーは店主とその友達、お客さんといった愉快なおじさん達。パン祭りに良く出没する。',
       musicInduce: 'プクムクズを聴く',
       musicInduce: {text: 'プクムクズを聴く', link: 'music'},
       cdArtist: '❞プクムクズ❞',
@@ -110,7 +110,7 @@ export default {
       infoInduce: {text: 'お知らせはこちら', link: 'info'},
     }
   },
-  mounted () {
+  mounted() {
     this.onResize()
   },
   methods: {

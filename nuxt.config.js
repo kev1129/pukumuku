@@ -1,15 +1,8 @@
 import pkg from './package'
 const fs = require('fs');
 const CdJson = JSON.parse(fs.readFileSync('static/json/cds.json'));
-const MenuJson = JSON.parse(fs.readFileSync('static/json/menu.json'));
-const MenuNothingJson = JSON.parse(fs.readFileSync('static/json/menu-nothing-milk-egg.json'));
-const MenuRankingJson = JSON.parse(fs.readFileSync('static/json/menu-ranking.json'));
-const MenuBananaJson = JSON.parse(fs.readFileSync('static/json/menu-use-banana.json'));
-const MenuEggJson = JSON.parse(fs.readFileSync('static/json/menu-use-egg.json'));
-const MenuMilkJson = JSON.parse(fs.readFileSync('static/json/menu-use-milk.json'));
-const MenuPeanutsJson = JSON.parse(fs.readFileSync('static/json/menu-use-peanuts.json'));
 const MenuTopJson = JSON.parse(fs.readFileSync('static/json/menu-top.json'));
-const MenuWalnatJson = JSON.parse(fs.readFileSync('static/json/menu-use-walnat.json'));
+const MenuMainJson = JSON.parse(fs.readFileSync('static/json/menu-main.json'));
 const NoticeJson = JSON.parse(fs.readFileSync('static/json/notice.json'));
 const flyerJson = JSON.parse(fs.readFileSync('static/json/flyer.json'));
 
@@ -52,7 +45,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src:"~plugins/vue2-google-maps.js"},
+    {src:"~plugins/vue2-google-maps.js"}
   ],
 
   /*
@@ -88,16 +81,8 @@ export default {
   vendor:["vue2-google-maps"],
   env: {
     cds: CdJson,
-    menu: MenuJson,
-    menuRanking: MenuRankingJson,
-    menuNothing: MenuNothingJson,
-    menuBanana: MenuBananaJson,
-    menuEgg: MenuEggJson,
-    menuMilk: MenuMilkJson,
-    menuPeanuts: MenuPeanutsJson,
+    menuMain: MenuMainJson,
     menuTop: MenuTopJson,
-    // MenuSasume: MenuSasumeJson,
-    menuWalnat: MenuWalnatJson,
     notice: NoticeJson,
     flyer: flyerJson
   },
