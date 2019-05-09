@@ -6,7 +6,7 @@
         <v-layout align-start justify-end reverse row wrap>
           <v-flex xs12 sm12 md6 lg6>
             <base-subtitle :sub-title="artist"></base-subtitle>
-            <p class="music__text">南台の伝説のバンド「<span class="font_red">プクムクズ</span>」(Pukumuku's)。<br>ボーカルは店主サトル。バンドメンバーにはサトルの友達と、お客さんを巻き込んでいる。パン祭りに良く出没する。<br>パンと愛の歌しか歌わない。</p>
+            <p class="music__text">南台の伝説のバンド「<span class="font_red">プクムクズ</span>」(Pukumuku's)。<br>ボーカルは店主サトル。バンドメンバーはサトルの友達と、お客さんまで。パン祭りに良く出没します。<br>基本的に、パンの歌しか歌えません。</p>
           </v-flex>
           <v-flex xs12 sm12 md6 lg6>
             <v-img src="img/band.jpg" aspect-ratio="1.5"></v-img>

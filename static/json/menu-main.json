@@ -1,6 +1,21 @@
 [
-    { "name" : "南台レーズンサンド", "price" : "240","url": "img/bread/kasi/meron.jpg"},
-    { "name" : "じゃがいも", "price" : "130",  "url": "img/bread/kasi/meron.jpg"},
-    { "name" : "たまご", "price" : "140", "url": "img/bread/kasi/meron.jpg"},
-    { "name" : "プクムクバーガー", "price" : "280","url": "img/bread/kasi/meron.jpg"}
+  {"name": "プクムクチーズバーガー", "price": "300","url": "img/bread/tizubaga.jpg"},
+  {"name" : "ねぎぱん", "price" : "130","url": "img/bread/negi.jpg"},
+  {"name" : "ココアぱん", "price" : "130","url": "img/bread/kokoa.jpg"},
+  {"name": "たまごぱん", "price": "140","url": "img/bread/tamago.jpg"},
+  {"name" : "クリームぱん", "price" : "120","url": "img/bread/kurimu.jpg"},
+  {"name": "じゃがいもぱん", "price": "130","url": "img/bread/zyagaimo.jpg"},
+  {"name": "クリームメロン", "price": "180","url": "img/bread/meronkurimu.jpg"},
+  {"name": "チーズマヨネーズ", "price": "130","url": "img/bread/tizumayo.jpg"},
+  {"name": "クリあずきデニッシュ", "price": "150","url": "img/bread/kuriazuki.jpg"},
+  {"name": "フルーツチーズ", "price": "130","url": "img/bread/furututizu.jpg"},
+  {"name": "くるみあんぱん", "price": "130","url": "img/bread/kurumianko.jpg"},
+  {"name": "チョコぱん", "price": "130","url": "img/bread/tyoko.jpg"},
+  {"name": "チョコデニッシュ", "price": "130","url": "img/bread/tyokodeni.jpg"},
+  {"name": "メロンぱん", "price": "130","url": "img/bread/meron.jpg"},
+  {"name": "シナモンレーズン", "price": "130","url": "img/bread/sinamon.jpg"},
+  {"name": "きのこぱん", "price": "130","url": "img/bread/kinoko.jpg"},
+  {"name": "かぼちゃのモンブラン", "price": "180","url": "img/bread/kabotya.jpg"},
+  {"name": "さつまいもぱん", "price": "130","url": "img/bread/satumaimo.jpg"},
+  {"name": "南台レーズンサンド", "price": "240","url": "img/bread/hurutusando.jpg"}
 ]

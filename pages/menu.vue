@@ -2,35 +2,32 @@
   <v-container class="container">
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
-      <v-container grid-list-xl>
-        <v-layout align-start row wrap>
-          <v-flex
-            v-for="(item, index) in menu"
-            :key="index"
-            xs6 sm4 md3 lg3
-          >
-            <base-menu
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-menu>
+      <base-subtitle :sub-title="popularMenu"></base-subtitle>
+      <div class="menu__list">
+        <v-container grid-list-xl>
+          <v-layout align-start row wrap>
+            <v-flex
+              v-for="(item, index) in menu"
+              :key="index"
+              xs6 sm4 md3 lg3
+            >
+              <base-menu
+                :bread-name="item.name"
+                :bread-price="item.price"
+                :bread-url="item.url"
+              ></base-menu>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
+      <div class="menu__color">
+        <base-subtitle :sub-title="colorMenu"></base-subtitle>
+        <v-layout>
+          <v-flex>
+            <v-img src="img/menu-color.jpg" cover></v-img>
           </v-flex>
         </v-layout>
-      </v-container>
-      <v-img src="img/menu-color.jpg" cover></v-img>
-      <!-- <v-container grid-list-xl>
-        <v-layout align-start row wrap>
-          <v-flex
-            v-for="(item, index) in specialMenu"
-            :key="index"
-            xs6 sm6 md6 lg6
-          >
-            <v-img :src="item.url" contain></v-img>
-            <h2>{{item.name}}</h2>
-            <base-text :text="item.text"></base-text>
-          </v-flex>
-        </v-layout>
-      </v-container> -->
+      </div>
     </div>
   </v-container>
 </template>
@@ -51,6 +48,8 @@ export default {
   data () {
     return {
       menuTitle: 'MENU',
+      popularMenu: '人気のぱん',
+      colorMenu: 'メニュー',
       specialMenu: [
         { name : "酵母パン", price : "360", url: "img/bread/koubo.jpg", text: '天然酵母で発酵。なんと麹菌も使っている！素朴で濃厚で独特な香は一度食べないと損！'},
         { name : "クリーム", price : "120", url: "img/bread/koubo.jpg", text: '濃厚なキャラメル風味のクリームがたっぷり詰まったぱん。¥120でこれはお得！'}
@@ -73,5 +72,8 @@ export default {
 <style lang="scss" scoped>
 .container {
   padding-top: 0;
+}
+.menu__list {
+  margin-bottom: 64px;
 }
 </style>

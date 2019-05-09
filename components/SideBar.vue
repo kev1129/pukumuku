@@ -32,7 +32,7 @@ export default {
 				{title: 'HOME', link: '/'},
 				{title: 'MENU', link: 'menu'},
 				{title: 'MUSIC', link: 'music'},
-				{title: 'NEWS', link: 'news'},
+				// {title: 'NEWS', link: 'news'},
 				{title: 'INFOMATION', link: 'info'}
 			]
 		}
