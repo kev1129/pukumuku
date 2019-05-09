@@ -3,63 +3,78 @@
     <!-- menu -->
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
-      <base-text :text="menuText"></base-text>
       <v-container grid-list-xl>
-        <v-layout align-start row wrap>
-          <v-flex
-            v-for="(item, index) in menu"
-            :key="index"
-            xs6 sm4 md4 lg4
-          >
-            <base-menu
-              :bread-name="item.name"
-              :bread-price="item.price"
-              :bread-url="item.url"
-            ></base-menu>
+        <base-text :text="menuText"></base-text>
+        <div class="menu__list">
+          <v-layout align-start row wrap>
+            <v-flex
+              v-for="(item, index) in menu"
+              :key="index"
+              xs6 sm4 md4 lg4
+            >
+              <base-menu
+                :bread-name="item.name"
+                :bread-price="item.price"
+                :bread-url="item.url"
+              ></base-menu>
+            </v-flex>
+          </v-layout>
+        </div>
+        <v-layout justify-end>
+          <v-flex xs4 sm4 md4 lg4>
+            <base-induce v-bind="menuInduce"></base-induce>
           </v-flex>
         </v-layout>
       </v-container>
-      <base-induce v-bind="menuInduce"></base-induce>
     </div>
     <!-- music -->
     <div class="section music">
       <base-title class="section_title" :title="musicTitle"></base-title>
       <v-container grid-list-xl>
-        <v-layout align-start row wrap>
-          <v-flex xs10 sm6 md5 lg5>
-            <base-cd :cd-url="cdUrl"></base-cd>
-          </v-flex>
-          <v-flex xs10 sm6 md5 lg5>
-            <base-subtitle :sub-title="cdArtist"></base-subtitle>
-            <base-subtitle :sub-title="cdTitle" :class="{ font_red: isRed}"></base-subtitle>
-            <base-text :text="musicText"></base-text>
+        <div class="music__cd">
+          <v-layout align-start row wrap>
+            <v-flex xs10 sm6 md5 lg5>
+              <base-cd :cd-url="cdUrl"></base-cd>
+            </v-flex>
+            <v-flex xs10 sm6 md5 lg5>
+              <base-subtitle :sub-title="cdArtist"></base-subtitle>
+              <base-subtitle :sub-title="cdTitle" :class="{ font_red: isRed}"></base-subtitle>
+              <base-text :text="musicText"></base-text>
+            </v-flex>
+          </v-layout>
+        </div>
+        <v-layout justify-end>
+          <v-flex xs4 sm4 md4 lg4>
+            <base-induce v-bind="musicInduce"></base-induce>
           </v-flex>
         </v-layout>
       </v-container>
-      <base-induce v-bind="musicInduce"></base-induce>
     </div>
     <!-- infomation -->
     <div class="section infomation">
       <base-title class="section_title" :title="infoTitle"></base-title>
-      <v-container grid-list-xl>
-        <v-layout align-center justify-center row wrap>
-          <v-flex xs12 sm10 md10 lg6>
-            <base-instagram></base-instagram>
-          </v-flex>
-          <v-flex xs12 sm10 md10 lg6>
-            <base-info></base-info>
-          </v-flex>
-        </v-layout>
-      </v-container>
-      <v-container>
-            <v-layout v-resize="onResize" align-center justify-center>
+      <v-container class="container">
+        <div class="section infomation">
+          <div class="map">
+            <v-layout  v-resize="onResize" align-center justify-center>
               <v-flex xs12 sm12 md12 lg12>
                 <base-map :map-width="windowSize.x" :map-height="windowSize.y"></base-map>
               </v-flex>
             </v-layout>
+          </div>
+          <div class="infomation">
+            <v-layout align-start>
+              <v-flex xs12 sm12 md12 lg8>
+                <base-subtitle :sub-title="store"></base-subtitle>
+                <base-info></base-info>
+              </v-flex>
+            </v-layout>
+          </div>
+        </div>
       </v-container>
-      <base-induce v-bind="infoInduce"></base-induce>
     </div>
+    <!-- instagram -->
+    <base-instagram></base-instagram>
   </v-container>
 </template>
 
@@ -97,7 +112,7 @@ export default {
       isRed: true,
       menuTitle: 'MENU',
       menuText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
-      menuInduce: {text: 'メニュー & アレルギー', link: 'menu'},
+      menuInduce: {text: 'メニュー&アレルギー', link: 'menu'},
       musicTitle: 'MUSIC',
       musicText: '南台の伝説のバンド「プクムクズ」。バンドメンバーは店主とその友達、お客さんといった愉快なおじさん達。パン祭りに良く出没する。',
       musicInduce: 'プクムクズを聴く',
@@ -106,6 +121,7 @@ export default {
       cdTitle: 'きみとぱん プクムクのテーマ',
       cdUrl: 'img/cd/cd1.jpg',
       infoTitle: 'INFTOMATION',
+      store: '店舗情報',
       infoText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
       infoInduce: {text: 'お知らせはこちら', link: 'info'},
     }
@@ -129,5 +145,14 @@ export default {
 <style lang="scss" scoped>
 .container {
   padding-top: 0;
+}
+.menu__list {
+  margin-bottom: 40px;
+}
+.music__cd {
+  margin-bottom: 40px;
+}
+.map {
+  margin-bottom: 40px;
 }
 </style>

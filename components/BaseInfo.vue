@@ -44,7 +44,7 @@
 </script>
 
 <style lang="scss" scoped>
-.data {
-  max-width: 500px;
-}
+// .data {
+//   max-width: 500px;
+// }
 </style>

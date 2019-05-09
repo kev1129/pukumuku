@@ -1,45 +1,58 @@
 <template>
-  <v-container>
-    <base-title class="section_title" :title="infoTitle"></base-title>
-    <v-layout column>
-      <!-- info and map -->
-      <v-layout justify-center wrap row>
-        <v-flex xs11 sm10 md6 lg5>
-          <base-info></base-info>
-        </v-flex>
-        <v-flex x11 sm10 md6 lg5>          
-          <base-map></base-map>
-        </v-flex>
-      </v-layout>
-      <!-- notice -->
-      <v-layout align-center justify-center wrap row>
-        <v-flex
-          v-for="(item, index) in notice"
-          :key="index"
-        >
-          <base-image :image-url="item.url"></base-image>
-        </v-flex>
-      </v-layout>
-    </v-layout>
+  <v-container class="container">
+    <div class="section infomation">
+      <base-title class="section_title" :title="infoTitle"></base-title>
+      <div class="map">
+        <v-layout  v-resize="onResize" align-center justify-center>
+          <v-flex xs12 sm12 md12 lg12>
+            <base-map :map-width="windowSize.x" :map-height="windowSize.y"></base-map>
+          </v-flex>
+        </v-layout>
+      </div>
+      <div class="infomation">
+        <v-layout align-start>
+          <v-flex xs12 sm12 md12 lg8>
+            <base-subtitle :sub-title="store"></base-subtitle>
+            <base-info></base-info>
+          </v-flex>
+        </v-layout>
+      </div>
+    </div>
   </v-container>
 </template>
     
 <script>
-import ToolBar from '~/components/ToolBar.vue'
+import BaseTitle from '~/components/BaseTitle.vue'
+import BaseSubtitle from '~/components/BaseSubtitle.vue'
 import BaseInfo from '~/components/BaseInfo.vue'
 import BaseMap from '~/components/BaseMap.vue'
-import BaseImage from '~/components/BaseImage.vue'
+import BaseInstagram from '~/components/BaseInstagram.vue'
+
 export default {
   layouts: 'default',
   components: {
-    ToolBar,
+    BaseTitle,
+    BaseSubtitle,
     BaseInfo,
     BaseMap,
-    BaseImage
+    BaseInstagram
   },
   data () {
     return {
-      infoTitle: 'INFOMATION'
+      infoTitle: 'INFOMATION',
+      store: '店舗情報',
+      windowSize: {
+        x: 0,
+        y: 0,
+      },
+    }
+  },
+  mounted() {
+    this.onResize()
+  },
+  methods: {
+    onResize () {
+      this.windowSize = { x: window.innerWidth * 0.7, y: window.innerHeight * 0.7}
     }
   },
   asyncData({ env }) {
@@ -49,7 +62,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tool-bar {
-  margin-top: 40px;
+.container {
+  padding-top: 0;
+}
+.map {
+  margin-bottom: 64px;
 }
 </style>
