@@ -4,22 +4,23 @@
     <v-content>
       <v-container fluid>
         <nuxt />
+      <!-- <base-footer></base-footer> -->
       </v-container>
     </v-content>
-    <v-footer></v-footer>
   </v-app>
 </template>
 
 <script>
 import SideBar from '~/components/SideBar.vue'
+import BaseFooter from '~/components/BaseFooter.vue'
 
 export default {
   components: {
     SideBar,
+    BaseFooter
   }
 }
 </script>
-
 
 <style lang="scss">
 /* color */
@@ -59,5 +60,5 @@ html {
 /* セクションごとのタイトルに .section_title をつけて、marginを調整 */
 .section_title {
   margin-bottom: 16px;
-}
+}    
 </style>
