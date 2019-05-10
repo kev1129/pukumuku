@@ -26,7 +26,7 @@
             xs12 sm6 md5 lg5
           >
             <base-subtitle :sub-title="item.title" :class="{ font_center: true }"></base-subtitle>
-            <base-cd 
+            <base-cd
               :cd-url="item.url"
             ></base-cd>
             <base-music

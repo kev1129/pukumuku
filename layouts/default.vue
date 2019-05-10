@@ -4,7 +4,6 @@
     <v-content>
       <v-container fluid>
         <nuxt />
-      <!-- <base-footer></base-footer> -->
       </v-container>
     </v-content>
   </v-app>
@@ -12,12 +11,10 @@
 
 <script>
 import SideBar from '~/components/SideBar.vue'
-import BaseFooter from '~/components/BaseFooter.vue'
 
 export default {
   components: {
     SideBar,
-    BaseFooter
   }
 }
 </script>

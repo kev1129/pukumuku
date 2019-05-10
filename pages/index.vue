@@ -46,7 +46,7 @@
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
       <v-container grid-list-xl>
-        <base-text :text="menuText"></base-text>
+        <!-- <base-text :text="menuText"></base-text> -->
         <div class="menu__list">
           <v-layout align-start row wrap>
             <v-flex
@@ -107,12 +107,18 @@
             </v-layout>
           </div>
           <div class="infomation">
-            <v-layout align-start>
-              <v-flex xs12 sm12 md12 lg8>
-                <base-subtitle :sub-title="store"></base-subtitle>
-                <base-info></base-info>
-              </v-flex>
-            </v-layout>
+            <v-container grid-list-md>
+              <v-layout align-start row wrap>
+                <v-flex xs12 sm12 md12 lg7>
+                  <base-subtitle :sub-title="store"></base-subtitle>
+                  <base-info></base-info>
+                </v-flex>
+                <v-flex xs12 sm12 md12 lg5>
+                  <base-subtitle :sub-title="instagram"></base-subtitle>
+                  <base-instagram></base-instagram>
+                </v-flex>
+              </v-layout>
+            </v-container>
           </div>
         </div>
       </v-container>
@@ -124,7 +130,14 @@
             <mobile-menu></mobile-menu>
           </v-flex>
           <v-flex>
-            <span class="copy">© パン工房 プクムク</span>
+            <v-layout align-center justify-center column>
+              <v-flex>
+                <base-totop class="to_top"></base-totop>
+              </v-flex>
+              <v-flex>
+                <span class="copy">© パン工房 プクムク</span>
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
     </div>
@@ -145,6 +158,7 @@ import BaseInstagram from '~/components/BaseInstagram.vue'
 import BaseInduce from '~/components/BaseInduce.vue'
 import MobileNav from '~/components/MobileNav.vue'
 import MobileMenu from '~/components/MobileMenu.vue'
+import BaseTotop from '~/components/BaseTotop.vue'
 
 export default {
   components: {
@@ -159,7 +173,8 @@ export default {
     BaseInstagram,
     BaseInduce,
     MobileNav,
-    MobileMenu
+    MobileMenu,
+    BaseTotop
   },
   data () {
     return {
@@ -177,7 +192,7 @@ export default {
       storeDescription3: '',
       isRed: true,
       menuTitle: 'MENU',
-      menuText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
+      menuText: '',
       menuInduce: {text: 'メニュー&アレルギー', link: 'menu'},
       musicTitle: 'MUSIC',
       musicText: '南台の伝説のバンド「プクムクズ」。バンドメンバーは店主とその友達、お客さんといった愉快なおじさん達。パン祭りに良く出没する。',
@@ -192,6 +207,7 @@ export default {
       store: '店舗情報',
       infoText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
       infoInduce: {text: 'お知らせはこちら', link: 'info'},
+      instagram: 'お知らせ'
     }
   },
   mounted() {
@@ -249,5 +265,8 @@ export default {
 }
 .copy {
   text-align: center;
+}
+.to_top {
+  margin-bottom: 32px;
 }
 </style>

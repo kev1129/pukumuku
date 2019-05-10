@@ -19,6 +19,21 @@
             </v-flex>
           </v-layout>
         </v-container>
+        <!-- <v-container grid-list-xl>
+          <v-layout align-start row wrap>
+            <v-flex
+              v-for="(item, index) in specialMenu"
+              :key="index"
+              xs12 sm12 md6 lg6
+            >
+              <base-subtitle :sub-title="item.name"></base-subtitle>
+              <base-text :text="item.text"></base-text>
+              <v-img :src="item.url" aspect-ratio="1"></v-img>
+            </v-flex>
+            <v-flex>
+            </v-flex>
+          </v-layout>
+        </v-container> -->
       </div>
       <div class="menu__color">
         <base-subtitle :sub-title="colorMenu"></base-subtitle>
@@ -51,9 +66,9 @@ export default {
       popularMenu: '人気のぱん',
       colorMenu: 'メニュー',
       specialMenu: [
-        { name : "酵母パン", price : "360", url: "img/bread/koubo.jpg", text: '天然酵母で発酵。なんと麹菌も使っている！素朴で濃厚で独特な香は一度食べないと損！'},
-        { name : "クリーム", price : "120", url: "img/bread/koubo.jpg", text: '濃厚なキャラメル風味のクリームがたっぷり詰まったぱん。¥120でこれはお得！'}
-      ]
+        { name : "酵母パン", price : "360", url: "img/bread/kouzi.jpg", text: '天然酵母で発酵。なんと麹菌も使っている！素朴で濃厚で独特な風味。'},
+        { name : "わんちゃんぱん", price : "50", url: "img/bread/inu.jpg", text: '「犬にぱんを食べさせたい」という声から生まれたぱん。無塩です。'}
+      ],
     }
   },
   computed: {
