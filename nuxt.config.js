@@ -20,7 +20,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'description', content: '中野区南台のパン屋さん「パン工房 プクムク」のホームページ。' },
+      { name: 'og:url', content: 'https://shinadokebukawa.com/pankouboupukumuku' },
+      { name: 'og:title', content: 'パン工房 プクムク - 中野区南台のパン屋さん' },
+      { name: 'og:description', content: '中野区南台のパン屋さん「パン工房 プクムク」のホームページ。' },
+      { name: 'og:image', content: 'img/icon.jpg' },
+      { name: 'og:site_name', content: 'パン工房 プクムク - 中野区南台のパン屋さん' },
+      { name: 'twitter:site', content: 'パン工房 プクムク - 中野区南台のパン屋さん' },
+      { name: 'og:locale', content: 'ja_JP' },
     ],
     script: [
     ],

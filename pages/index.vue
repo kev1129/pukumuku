@@ -14,20 +14,20 @@
       <base-pagetitle :title="title"></base-pagetitle>
       <v-container grid-list-md>
         <v-layout align-start row wrap>
-          <v-flex xs12 sm12 md6 lg6>
-            <v-img
-              :src="titleImage"
-              contain
-              class="top__img_title"
-            ></v-img>
-            <base-subtitle
-              :sub-title="storeName"
-              class="top__title"
-            ></base-subtitle>
-            <p class="top__text">中野区南台の胃袋を支えるパン屋『パン工房 プクムク』です。<br>平日は毎日朝の6時半～18時までやってます。パンが無くなり次第終了です。</p>
-            <p class="top__text">天然酵母と麹菌を使った「酵母パン」を初めに、「ししゃもぱん」、幻の「納豆サンド」...。日々可能性を探ってます。<br>
-              それでも人気No.1は、ぎっしりクリームの詰まった「クリームパン」。</p>
-            <p class="top__text">パンへの愛を歌う『プクムクズ』というバンドをやっているので、聴いてみてください。</p>
+          <v-flex xs12 sm12 md6 lg6 class="top_head">
+              <v-img
+                :src="titleImage"
+                contain
+                class="top__img_title"
+              ></v-img>
+              <base-subtitle
+                :sub-title="storeName"
+                class="top__title"
+              ></base-subtitle>
+              <p class="top__text">中野区南台の胃袋を支えるパン屋『パン工房 プクムク』です。<br>平日は毎日朝の6時半～18時までやってます。パンが無くなり次第終了です。</p>
+              <p class="top__text">天然酵母と麹菌を使った「酵母パン」を初めに、「ししゃもぱん」、幻の「納豆サンド」...。日々可能性を探ってます。<br>
+                それでも人気No.1は、ぎっしりクリームの詰まった「クリームパン」。</p>
+              <span class="top__text">パンへの愛を歌う『プクムクズ』というバンドをやっているので、聴いてみてください。</span>
           </v-flex>
           <v-flex xs12 sm12 md6 lg6>
             <v-img
@@ -35,6 +35,7 @@
               contain
               class="top__img_store"
             ></v-img>
+            <p class="top__img_store_text">in お店の写真 (by サトル)</p>
           </v-flex>
           <v-layout>
             <v-flex class="instagram">
@@ -110,11 +111,11 @@
             <v-container grid-list-md>
               <v-layout align-start row wrap>
                 <v-flex xs12 sm12 md12 lg7>
-                  <base-subtitle :sub-title="store"></base-subtitle>
+                  <base-subtitle :sub-title="store" class="infomation__sub_title"></base-subtitle>
                   <base-info></base-info>
                 </v-flex>
                 <v-flex xs12 sm12 md12 lg5>
-                  <base-subtitle :sub-title="instagram"></base-subtitle>
+                  <base-subtitle :sub-title="instagram" class="infomation__sub_title"></base-subtitle>
                   <base-instagram></base-instagram>
                 </v-flex>
               </v-layout>
@@ -206,8 +207,7 @@ export default {
       mapText: '最寄り駅は「笹塚駅」「中野富士見町」「中野駅」。中野からバスで「新山小学校前」。笹塚から徒歩で15分程。',
       store: '店舗情報',
       infoText: 'メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。メニューの紹介。',
-      infoInduce: {text: 'お知らせはこちら', link: 'info'},
-      instagram: 'お知らせ'
+      // infoInduce: {text: 'お知らせはこちら', link: 'info'},
     }
   },
   mounted() {
@@ -238,17 +238,26 @@ export default {
 }
 // top section
 .top {
-  .top__img_title {
+  .top_head {
     margin-bottom: 24px;
+    .top__img_title {
+      margin-bottom: 24px;
+    }
+    .top__title {
+      margin-bottom: 8px;
+    }
+    .top__text {
+      font-family: 'Sawarabi Gothic';
+      font-size: 1.1rem;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+    }
   }
-  .top__title {
-    margin-bottom: 8px;
-  }
-  .top__text {
-    font-family: 'Sawarabi Gothic';
-    font-size: 1.1rem;
-    letter-spacing: 0;
-    margin-bottom: 8px;
+  .top__img_store {
+    margin-bottom: 4px;
+    .top__img_store_text {
+      opacity: .7;
+    }
   }
 }
 .menu__list {
@@ -260,7 +269,7 @@ export default {
 .infomation {
   margin-bottom: 0;
   .map {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 }
 .copy {
@@ -268,5 +277,9 @@ export default {
 }
 .to_top {
   margin-bottom: 32px;
+}
+.infomation__sub_title {
+  margin-bottom: 12px;
+  text-align: center;
 }
 </style>
