@@ -47,6 +47,9 @@ export default {
   */
   css: [
   ],
+  router: {
+    base: '/pankouboupukumuku/'
+  },
 
   /*
   ** Plugins to load before mounting the App
@@ -83,7 +86,8 @@ export default {
           }
         })
       }
-    }
+    },
+    extractCSS: true
   },
   vendor:["vue2-google-maps"],
   env: {
