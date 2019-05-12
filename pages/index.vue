@@ -148,7 +148,7 @@
 
 <script>
 import BasePagetitle from '~/components/BasePagetitle.vue'
-import BaseTitle from '~/components/BaseTItle.vue'
+import BaseTitle from '~/components/BaseTitle.vue'
 import BaseSubtitle from '~/components/BaseSubtitle.vue'
 import BaseText from '~/components/BaseText.vue'
 import BaseMenu from '~/components/BaseMenu.vue'
