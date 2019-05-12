@@ -41,3 +41,5 @@ gitのブランチ
 - レスポンシブ化の調整
 - 画像の切り抜き
 - vue2-google-mapのサイズ調整をQiitaに投稿
+- Netifyのカスタムドメイン設定
+- google an~~ 
