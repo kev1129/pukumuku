@@ -47,10 +47,7 @@ export default {
   */
   css: [
   ],
-  router: {
-    base: '/pankouboupukumuku/'
-  },
-
+  
   /*
   ** Plugins to load before mounting the App
   */
