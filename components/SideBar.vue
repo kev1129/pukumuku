@@ -78,7 +78,7 @@ export default {
 .instagram {
   display: block;
   color: #000;
-  margin-top: 24px;
+  margin-top: 12px;
   font-family: 'Francois One';
   text-decoration: none;
   text-align: center;
