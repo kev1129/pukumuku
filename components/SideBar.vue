@@ -7,7 +7,7 @@
           <p class="sidebar__icon_title site-title"><strong>{{siteTitle}}</strong><br>Since 1999</p>
         </div>
       </v-layout>
-      <v-container grid-list-md>
+      <v-container fluid grid-list-md>
         <v-layout column class="menu__list">
           <v-flex
             v-for="(item, index) in menu"

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="container">
+  <v-container fluid class="container">
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
       <base-subtitle :sub-title="popularMenu" class="menu__sub_title"></base-subtitle>

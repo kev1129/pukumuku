@@ -43,3 +43,6 @@ gitのブランチ
 - vue2-google-mapのサイズ調整をQiitaに投稿
 - Netifyのカスタムドメイン設定
 - google an~~ 
+- 全てのページにmenuつける
+- titleとか　レスポンジ
+- エラー治す

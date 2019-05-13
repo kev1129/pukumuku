@@ -1,5 +1,5 @@
 <template>
-  <v-container class="container">
+  <v-container fluid class="container">
     <div class="section artist">
       <base-title class="section_title" :title="articsTitle"></base-title>
       <v-container grid-list-xl>

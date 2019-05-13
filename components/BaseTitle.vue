@@ -19,4 +19,11 @@ export default {
     background: #000;
     padding-left: 24px;
 }
+// @media only screen and (max-width: 959px) {
+//   .base_title {
+//     padding-left: 0px;
+//     padding-top: 36px;
+//     padding-bottom: 36px;
+//   }
+// }
 </style>

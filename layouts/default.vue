@@ -1,6 +1,10 @@
 <template>
   <v-app>
-    <v-navigation-drawer app><side-bar></side-bar></v-navigation-drawer>
+    <v-navigation-drawer
+      app
+    >
+      <side-bar></side-bar>
+    </v-navigation-drawer>
     <v-content>
       <v-container fluid>
         <nuxt />
@@ -24,6 +28,21 @@ export default {
 $font-orange: rgba(255, 69, 0, 1);
 
 /* common */
+.v-content__wrap {
+  width: none;
+  max-width: none;
+}
+@media only screen and (max-width: 959px) {
+  .container {
+      padding: 0;
+  }
+  .base_title {
+    padding-left: 0px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
 html {
   font-family: 'Francois One', 'Sawarabi Gothic', "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

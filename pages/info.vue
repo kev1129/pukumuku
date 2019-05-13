@@ -1,7 +1,7 @@
 <template>
     <div class="section infomation">
       <base-title class="section_title" :title="infoTitle"></base-title>
-      <v-container class="container">
+      <v-container fluid class="container">
         <div class="section infomation">
           <div class="map">
             <base-subtitle :sub-title="map"></base-subtitle>
@@ -13,7 +13,7 @@
             </v-layout>
           </div>
           <div class="infomation">
-            <v-container grid-list-md>
+            <v-container fluid grid-list-md>
               <v-layout align-start row wrap>
                 <v-flex xs12 sm12 md12 lg7>
                   <base-subtitle :sub-title="store" class="infomation__sub_title"></base-subtitle>

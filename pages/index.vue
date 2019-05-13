@@ -1,6 +1,6 @@
 <template>
 <div>
-  <v-container class="container" id="top">
+  <v-container fluid class="container" id="top">
     <!-- mobile navigation -->
     <div class="nav">
         <v-layout align-end justify-end>
@@ -12,7 +12,7 @@
     <!-- menu -->
     <div class="section top">
       <base-pagetitle :title="title"></base-pagetitle>
-      <v-container grid-list-md>
+      <v-container fluid grid-list-md>
         <v-layout align-start row wrap>
           <v-flex xs12 sm12 md6 lg6 class="top_head">
               <v-img
@@ -46,7 +46,7 @@
     </div>
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
-      <v-container grid-list-xl>
+      <v-container fluid grid-list-xl>
         <!-- <base-text :text="menuText"></base-text> -->
         <div class="menu__list">
           <v-layout align-start row wrap>
@@ -73,7 +73,7 @@
     <!-- music -->
     <div class="section music">
       <base-title class="section_title" :title="musicTitle"></base-title>
-      <v-container grid-list-xl>
+      <v-container fluid grid-list-xl>
         <div class="music__cd">
           <v-layout align-start row wrap>
             <v-flex xs10 sm6 md5 lg5>
@@ -96,12 +96,12 @@
     <!-- infomation -->
     <div class="section infomation">
       <base-title class="section_title" :title="infoTitle"></base-title>
-      <v-container class="container">
+      <v-container fluid class="container">
         <div class="section infomation">
           <div class="map">
             <base-subtitle :sub-title="map"></base-subtitle>
             <base-text :text="mapText"></base-text>
-            <v-layout  v-resize="onResize" align-center justify-center>
+            <v-layout v-resize="onResize" align-center justify-center>
               <v-flex xs12 sm12 md12 lg12>
                 <base-map :map-width="windowSize.x" :map-height="windowSize.y"></base-map>
               </v-flex>
@@ -113,11 +113,11 @@
                 <v-flex xs12 sm12 md12 lg7>
                   <base-subtitle :sub-title="store" class="infomation__sub_title"></base-subtitle>
                   <base-info></base-info>
-                </v-flex>
-                <v-flex xs12 sm12 md12 lg5>
+                </v-flex>                
+                <!-- <v-flex xs12 sm12 md12 lg5>
                   <base-subtitle :sub-title="instagram" class="infomation__sub_title"></base-subtitle>
                   <base-instagram></base-instagram>
-                </v-flex>
+                </v-flex> -->
               </v-layout>
             </v-container>
           </div>
@@ -216,7 +216,7 @@ export default {
   },
   methods: {
     onResize () {
-      this.windowSize = { x: window.innerWidth * 0.7, y: window.innerHeight * 0.7}
+      this.windowSize = { x: window.innerWidth * 0.73, y: window.innerHeight * 0.73}
     }
   },
   asyncData({ env }) {
@@ -281,6 +281,6 @@ export default {
 }
 .infomation__sub_title {
   margin-bottom: 12px;
-  text-align: center;
+  // text-align: center;
 }
 </style>
