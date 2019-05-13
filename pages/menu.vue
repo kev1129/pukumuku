@@ -2,7 +2,6 @@
   <v-container fluid class="container">
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
-      <base-subtitle :sub-title="popularMenu" class="menu__sub_title"></base-subtitle>
       <div class="menu__list">
         <v-container grid-list-xl>
           <v-layout align-start row wrap>
@@ -19,24 +18,9 @@
             </v-flex>
           </v-layout>
         </v-container>
-        <!-- <v-container grid-list-xl>
-          <v-layout align-start row wrap>
-            <v-flex
-              v-for="(item, index) in specialMenu"
-              :key="index"
-              xs12 sm12 md6 lg6
-            >
-              <base-subtitle :sub-title="item.name"></base-subtitle>
-              <base-text :text="item.text"></base-text>
-              <v-img :src="item.url" aspect-ratio="1"></v-img>
-            </v-flex>
-            <v-flex>
-            </v-flex>
-          </v-layout>
-        </v-container> -->
       </div>
       <div class="menu__color">
-        <base-subtitle :sub-title="colorMenu" class="menu__sub_title"></base-subtitle>
+      <base-title class="section_title" :title="colorMenu"></base-title>
         <p class="menu__text">時間や季節によっては、ないメニューもあります。<br>このメニュー表はお店でも配っています。</p>
         <v-layout>
           <v-flex>
@@ -45,7 +29,7 @@
         </v-layout>
       </div>
       <div class="menu__allergy">
-        <base-subtitle :sub-title="allergy" class="menu__sub_title"></base-subtitle>
+      <base-title class="section_title" :title="allergy"></base-title>
         <p class="menu__text">アレルギーに関する情報です。<br>ご不明な店がございましたら、お気軽にお電話下さい。(03-3380-8679)</p>
         <v-layout>
           <v-flex>
@@ -73,9 +57,8 @@ export default {
   data () {
     return {
       menuTitle: 'MENU',
-      popularMenu: '人気のぱん',
-      colorMenu: 'メニュー',
-      allergy: 'アレルギー',
+      colorMenu: 'ALL MENU',
+      allergy: 'Allergy',
       specialMenu: [
         { name : "酵母パン", price : "360", url: "img/bread/kouzi.jpg", text: '天然酵母で発酵。なんと麹菌も使っている！素朴で濃厚で独特な風味。'},
         { name : "わんちゃんぱん", price : "50", url: "img/bread/inu.jpg", text: '「犬にぱんを食べさせたい」という声から生まれたぱん。無塩です。'}

@@ -13,7 +13,6 @@ export default {
 <style lang="scss" scoped>
 .string {
     font-size: 2.4rem;
-    text-align: center;
 }
 .font_red {
     color: rgba(255, 69, 0, 1);

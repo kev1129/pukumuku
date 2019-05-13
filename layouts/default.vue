@@ -32,14 +32,12 @@ $font-orange: rgba(255, 69, 0, 1);
   width: none;
   max-width: none;
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1264px) {
   .container {
-      padding: 0;
+    padding: 0;
   }
-  .base_title {
-    padding-left: 0px;
-    padding-top: 36px;
-    padding-bottom: 36px;
+  .mobile_center {
+    text-align: center;  
   }
 }
 

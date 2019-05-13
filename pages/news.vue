@@ -13,13 +13,11 @@
 </template>
 
 <script>
-import ToolBar from '~/components/ToolBar.vue'
 import BaseCd from '~/components/BaseCd.vue'
 import BaseMusic from '~/components/BaseMusic.vue'
 import BaseSubtitle from '~/components/BaseSubtitle.vue'
 export default {
   components: {
-    ToolBar,
     BaseCd,
     BaseMusic,
     BaseSubtitle

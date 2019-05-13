@@ -42,8 +42,9 @@ import SideBar from '~/components/SideBar.vue'
 
 <style lang="scss" scoped>
   .btn {
-    color: #000;
+    color: #fff;
     font-size: 2rem;
+    font-family: 'Francois One';
     .bar {
       margin-left: 12px;
     }

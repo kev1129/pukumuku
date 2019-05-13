@@ -3,6 +3,7 @@
     <v-img
       :src="cdUrl"
       aspect-ratio="1"
+      class="cd"
     >
     </v-img>
   </v-card>
@@ -17,9 +18,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cd_title {
-  font-size: 1.8rem;
-  margin: auto;
-  text-align: center;
+@media only screen and (max-width: 1264px) {
+  .cd {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
+
 </style>

@@ -21,9 +21,12 @@ export default {
 <style lang="scss" scoped>
 .induce {
   position: relative;
-  display: inline-block;
-  color: #1B1B1B;
+  // display: inline-block;
+  color: #000;
+  // text-align: center;
+  // margin: 0 auto;
   text-decoration: none;
+  margin-top: 56px;
   .induce_text {
     font-family: 'Sawarabi Gothic';
     font-size: 1.4rem;

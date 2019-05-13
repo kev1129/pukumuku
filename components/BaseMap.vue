@@ -3,6 +3,7 @@
     :center="{lat:35.682181, lng:139.669296}"
     :zoom="17"
     map-type-id="terrain"
+    class="map"
     :style="{width: mapWidth + 'px',height: mapHeight + 'px'}"
   >
     <GmapMarker
@@ -31,3 +32,13 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 1264px) {
+  .map {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+</style>
+
