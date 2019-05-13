@@ -5,40 +5,25 @@
     <mobile-tool></mobile-tool>
     <!-- top -->
     <div class="section top">
-      <base-pagetitle :title="title" ></base-pagetitle>
-      <v-container fluid grid-list-md>
+      <base-pagetitle :title="title"></base-pagetitle>
+      <v-container fluid>
         <v-layout align-start row wrap>
           <v-flex xs12 sm12 md6 lg6 class="top_head">
-            <v-layout>
-              <v-flex hidden-lg-and-down>
-                <v-img
-                  :src="titleImage"
-                  contain
-                  class="top__img_title"
-                ></v-img>
-              </v-flex>
-            </v-layout>
-              <base-subtitle
-                :sub-title="storeName"
-                class="top__title"
-              ></base-subtitle>
-              <p class="top__text">中野区南台の胃袋を支えるパン屋『パン工房 プクムク』です。</p>
-              <p class="top__text">平日は毎日朝の6時半～18時までやってます。パンが無くなり次第終了です。</p>
-              <p class="top__text">天然酵母と麹菌を使った「酵母パン」を初めに、「ししゃもぱん」、幻の「納豆サンド」...。日々可能性を探ってます。<br>それでも人気No.1は、ぎっしりクリームの詰まった「クリームパン」。</p>
-              <p class="top__text">パンへの愛を歌う『プクムクズ』というバンドをやっているので、聴いてみてください。</p>
-              <p class="top__text">お陰様で20週年を迎えることができました。皆様ありがとうございまます。</p>
+            <base-subtitleleft
+              :sub-title="storeName"
+              class="top__title"
+            ></base-subtitleleft>
+            <p class="top__text">中野区南台の胃袋を支えるパン屋『パン工房 プクムク』です。</p>
+            <p class="top__text">パンへの愛を歌う『プクムクズ』というバンドをやっているので、聴いてみてください。</p>
+            <p class="top__text">お陰様で20週年を迎えることができました。皆様ありがとうございまます。</p>
           </v-flex>
           <v-flex xs12 sm12 md6 lg6>
             <v-img
-              :src="storeImage"
+              src="img/top.jpg"
               contain
               class="top__img_store"
             ></v-img>
           </v-flex>
-          <v-layout>
-            <v-flex class="instagram">
-            </v-flex>
-          </v-layout>
         </v-layout>
       </v-container>
     </div>
@@ -187,7 +172,7 @@ export default {
         y: 0,
       },
       title: 'PANKOUBOU PUKUMUKU',
-      storeImage: 'img/store.jpg',
+      storeImage: 'img/footer.jpg',
       junImage: 'img/instagram-back.jpg',
       titleImage: 'img/title.jpg',
       storeName: 'パン工房 プクムク',
