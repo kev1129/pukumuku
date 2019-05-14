@@ -46,11 +46,13 @@
             </v-flex>
           </v-layout>
         </div>
-        <v-layout align-center justify-center column wrap>
-          <v-flex>
-            <base-induce v-bind="menuInduce"></base-induce>
-          </v-flex>
-        </v-layout>
+        <v-container fluid>
+          <v-layout align-center justify-center column wrap>
+            <v-flex>
+              <base-induce v-bind="menuInduce"></base-induce>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-container>
     </div>
     <!-- music -->
@@ -70,11 +72,13 @@
             </v-flex>
           </v-layout>
         </div>
-        <v-layout align-center justify-center column wrap>
-          <v-flex>
-            <base-induce v-bind="musicInduce"></base-induce>
-          </v-flex>
-        </v-layout>
+        <v-container fluid>
+          <v-layout align-center justify-center column wrap>
+            <v-flex>
+              <base-induce v-bind="musicInduce"></base-induce>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-container>
     </div>
     <!-- infomation -->
@@ -86,7 +90,7 @@
             <v-layout align-center justify-center >
               <v-flex sm9 md12>
                 <base-subtitle :sub-title="map"></base-subtitle>
-                <base-text :text="mapText"></base-text>
+                <!-- <base-text :text="mapText"></base-text> -->
               </v-flex>       
             </v-layout>      
             <v-layout v-resize="onResize" align-center justify-center>

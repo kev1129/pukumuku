@@ -1,6 +1,8 @@
 <template>
     <div class="section infomation">
       <v-container fluid class="container">
+        <!-- mobile navigation -->
+        <mobile-tool></mobile-tool>
         <div class="section infomation">
       <base-title class="section_title" :title="map"></base-title>
           <div class="map">
@@ -36,6 +38,7 @@ import BaseSubtitle from '~/components/BaseSubtitle.vue'
 import BaseInfo from '~/components/BaseInfo.vue'
 import BaseMap from '~/components/BaseMap.vue'
 import BaseInstagram from '~/components/BaseInstagram.vue'
+import MobileTool from '~/components/MobileTool.vue'
 
 export default {
   layouts: 'default',
@@ -44,7 +47,8 @@ export default {
     BaseSubtitle,
     BaseInfo,
     BaseMap,
-    BaseInstagram
+    BaseInstagram,
+    MobileTool
   },
   data () {
     return {

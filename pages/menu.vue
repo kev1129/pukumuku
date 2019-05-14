@@ -1,5 +1,7 @@
 <template>
   <v-container fluid class="container">
+    <!-- mobile navigation -->
+    <mobile-tool></mobile-tool>
     <div class="section menu">
       <base-title class="section_title" :title="menuTitle"></base-title>
       <div class="menu__list">
@@ -46,13 +48,15 @@ import BaseTitle from '~/components/BaseTitle.vue'
 import BaseSubtitle from '~/components/BaseSubtitle.vue'
 import BaseText from '~/components/BaseText.vue'
 import BaseMenu from '~/components/BaseMenu.vue'
+import MobileTool from '~/components/MobileTool.vue'
 
 export default {
   components: {
     BaseTitle,
     BaseSubtitle,
     BaseText,
-    BaseMenu
+    BaseMenu,
+    MobileTool
   },
   data () {
     return {

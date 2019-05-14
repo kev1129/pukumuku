@@ -1,5 +1,7 @@
 <template>
   <v-container fluid class="container">
+    <!-- mobile navigation -->
+    <mobile-tool></mobile-tool>
     <div class="section artist">
       <base-title class="section_title" :title="articsTitle"></base-title>
       <v-container grid-list-xl>
@@ -45,6 +47,7 @@ import BaseText from '~/components/BaseText.vue'
 import BaseSubtitle from '~/components/BaseSubtitle.vue'
 import BaseCd from '~/components/BaseCd.vue'
 import BaseMusic from '~/components/BaseMusic.vue'
+import MobileTool from '~/components/MobileTool.vue'
 
 export default {
   components: {
@@ -52,7 +55,8 @@ export default {
     BaseText,
     BaseSubtitle,
     BaseCd,
-    BaseMusic
+    BaseMusic,
+    MobileTool
   },
   data () {
     return {

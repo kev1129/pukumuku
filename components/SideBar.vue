@@ -7,7 +7,7 @@
           <p class="sidebar__icon_title site-title"><strong>{{siteTitle}}</strong><br>Since 1999</p>
         </div>
       </v-layout>
-      <v-container fluid grid-list-md>
+      <v-container fluid grid-list-sm>
         <v-layout column class="menu__list">
           <v-flex
             v-for="(item, index) in menu"
@@ -65,7 +65,7 @@ export default {
 .menu {
   text-align: center;
   font-family: 'Francois One';
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   .menu__item {
     color: #000;
     text-decoration: none;
