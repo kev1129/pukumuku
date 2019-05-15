@@ -105,6 +105,14 @@ export default {
   webfontloader: {
     google: {
       families: [
+        'M+PLUS+Rounded+1c',
+        'Baloo+Bhai',
+        'Londrina+Solid',
+        'Nunito',
+        'Asap',
+        'Nunito+Sans:900',
+        'Nunito:400,900',
+        'Open+Sans',
         // title EN
         'Francois+One',
         // text JP

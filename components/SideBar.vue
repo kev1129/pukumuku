@@ -2,10 +2,10 @@
   <v-container fluid>
     <div class="sidebar">
       <v-layout align-center justify-center>
-        <div class="sidebar__icon">
-          <v-img src="img/icon-mono.jpg" class="sidebar__icon_img" aspect-ratio="0.75" contain></v-img>
+        <v-flex class="sidebar__icon" hidden-sm-and-down>
+          <v-img src="img/icon-red.jpg" class="sidebar__icon_img" aspect-ratio="0.75" contain></v-img>
           <p class="sidebar__icon_title site-title"><strong>{{siteTitle}}</strong><br>Since 1999</p>
-        </div>
+        </v-flex>
       </v-layout>
       <v-container fluid grid-list-sm>
         <v-layout column class="menu__list">
@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar__icon {
-  background: #000;
+  background:#ec1810;
   width: 100%;
   padding: 6% 3% 3% 0%;
   font-family: 'Francois One';
@@ -58,7 +58,7 @@ export default {
   }
   .sidebar__icon_title {
     text-align: center;
-    color: #fff;
+    color: #ffff00;
     margin-bottom: 4px;
   }
 }
@@ -78,7 +78,7 @@ export default {
 .instagram {
   display: block;
   color: #000;
-  margin-top: 24px;
+  margin-top: 18px;
   font-family: 'Francois One';
   text-decoration: none;
   text-align: center;

@@ -24,6 +24,6 @@ export default {
 .tool_bar {
   display: block;
   width: 100%;
-	background: #000;
+	background:#ec1810;
 }
 </style>

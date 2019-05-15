@@ -6,6 +6,7 @@
     <v-img
       :src="breadUrl"
       aspect-ratio="1.0"
+      cover
       class="card_img"
     ></v-img>
     <v-card-title class="card__text">

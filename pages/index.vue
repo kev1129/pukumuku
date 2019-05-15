@@ -36,7 +36,7 @@
             <v-flex
               v-for="(item, index) in menu"
               :key="index"
-              xs6 sm4 md3 lg3
+              xs6 sm4 md3 lg2
             >
               <base-menu
                 :bread-name="item.name"
@@ -83,14 +83,12 @@
     </div>
     <!-- infomation -->
     <div class="section infomation">
-      <base-title class="section_title" :title="infoTitle"></base-title>
+      <base-title class="section_title" :title="map"></base-title>
       <v-container fluid class="container">
         <div class="section infomation">
           <div class="map">
             <v-layout align-center justify-center >
               <v-flex sm9 md12>
-                <base-subtitle :sub-title="map"></base-subtitle>
-                <!-- <base-text :text="mapText"></base-text> -->
               </v-flex>       
             </v-layout>      
             <v-layout v-resize="onResize" align-center justify-center>
@@ -100,10 +98,10 @@
             </v-layout>
           </div>
           <div class="infomation">
+            <base-title class="section_title" :title="store"></base-title>
             <v-container grid-list-md>
-              <v-layout align-start justify-center row wrap>
+              <v-layout align-start justify-start row wrap>
                 <v-flex xs12 sm12 md12 lg7>
-                  <base-subtitle :sub-title="store" class="infomation__sub_title"></base-subtitle>
                   <base-info></base-info>
                 </v-flex>                
               </v-layout>
@@ -114,7 +112,7 @@
     </div>
     <!-- mobile bottom navigation -->
     <div class="button_nav">
-        <v-layout align-center justify-center column>
+        <v-layout align-center justify-start column>
           <v-flex hidden-lg-and-up>
             <mobile-menu></mobile-menu>
           </v-flex>
@@ -198,7 +196,7 @@ export default {
       infoTitle: 'INFTOMATION',
       map: 'MAP',
       mapText: '最寄り駅は「笹塚駅」「中野富士見町」「中野駅」。中野からバスで「新山小学校前」。笹塚から徒歩で15分程。',
-      store: '店舗情報',
+      store: 'STORE',
       instagram: 'お知らせ',
     }
   },

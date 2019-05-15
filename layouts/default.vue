@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss">
 /* color */
-$font-orange: rgba(255, 69, 0, 1);
+// #ec1810
 
 /* common */
 .v-content__wrap {
@@ -42,7 +42,7 @@ $font-orange: rgba(255, 69, 0, 1);
 }
 
 html {
-  font-family: 'Francois One', 'Sawarabi Gothic', "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'ヒラギノ丸ゴ ProN', 'Futura','Francois One', 'Sawarabi Gothic', "M PLUS 1p", 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;

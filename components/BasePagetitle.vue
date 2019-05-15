@@ -12,13 +12,16 @@ export default {
 
 <style lang="scss" scoped>
 .base_title {
-  font-family: 'Francois One';
-  letter-spacing: .3rem;
-  font-size: 4.3rem;
-  color: #fff;
-  background: #000;
+  font-family: 'Francois+One';
+  font-weight: 1000;
+  letter-spacing: 0.15rem;
+  font-size: 3rem;
+  // text-shadow: 5px 5px 0 #f5f5f5;
+  color: #ffff00;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, .4);
+  background: #ec1810;
   padding-left: 24px;
-  padding-top: 36px;
+  padding-top: 24px;
   margin-bottom: 32px;
   padding-bottom: 12px;
 }

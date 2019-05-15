@@ -15,8 +15,8 @@ export default {
   font-family: 'Francois One';
   letter-spacing: .3rem;
   font-size: 3.2rem;
-  color: #fff;
-  background: #000;
+  color: #ffff00;
+  background: #ec1810;
   padding-left: 24px;
 }
 @media only screen and (max-width: 1264px) {

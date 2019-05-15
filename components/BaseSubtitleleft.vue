@@ -15,7 +15,7 @@ export default {
     font-size: 2.4rem;
 }
 .font_red {
-    color: rgba(255, 69, 0, 1);
+    color: #ec1810;
 }
 .font_center {
     text-align: center;
