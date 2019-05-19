@@ -6,26 +6,7 @@
     <!-- top -->
     <div class="section top">
       <base-pagetitle :title="title"></base-pagetitle>
-      <v-container fluid>
-        <v-layout align-start row wrap>
-          <v-flex xs12 sm12 md6 lg6 class="top_head">
-            <base-subtitleleft
-              :sub-title="storeName"
-              class="top__title"
-            ></base-subtitleleft>
-            <p class="top__text">中野区南台の胃袋を支えるパン屋『パン工房 プクムク』です。</p>
-            <p class="top__text">パンへの愛を歌う『プクムクズ』というバンドをやっているので、聴いてみてください。</p>
-            <p class="top__text">お陰様で20週年を迎えることができました。皆様ありがとうございまます。</p>
-          </v-flex>
-          <v-flex xs12 sm12 md6 lg6>
-            <v-img
-              src="img/top.jpg"
-              contain
-              class="top__img_store"
-            ></v-img>
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <base-head></base-head>
     </div>
     <!-- menu -->
     <div class="section menu">
@@ -148,6 +129,7 @@ import MobileNav from '~/components/MobileNav.vue'
 import MobileMenu from '~/components/MobileMenu.vue'
 import BaseTotop from '~/components/BaseTotop.vue'
 import MobileTool from '~/components/MobileTool.vue'
+import BaseHead from '~/components/BaseHead.vue'
 
 export default {
   components: {
@@ -165,7 +147,8 @@ export default {
     MobileMenu,
     BaseTotop,
     MobileTool,
-    BaseSubtitleleft
+    BaseSubtitleleft,
+    BaseHead
   },
   data () {
     return {
@@ -225,27 +208,7 @@ export default {
 }
 // top section
 .top {
-  .top_head {
-    margin-bottom: 24px;
-    .top__img_title {
-      margin-bottom: 24px;
-    }
-    .top__title {
-      margin-bottom: 8px;
-    }
-    .top__text {
-      font-family: 'Sawarabi Gothic';
-      font-size: 1.1rem;
-      letter-spacing: 0;
-      margin-bottom: 8px;
-    }
-  }
-  .top__img_store {
-    margin-bottom: 4px;
-    .top__img_store_text {
-      opacity: .7;
-    }
-  }
+  margin-bottom: 0;
 }
 .menu__list {
   margin-bottom: 40px;

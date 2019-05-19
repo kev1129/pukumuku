@@ -22,7 +22,7 @@ export default {
   background: #ec1810;
   padding-left: 24px;
   padding-top: 24px;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
   padding-bottom: 12px;
 }
 @media only screen and (max-width: 1264px) {

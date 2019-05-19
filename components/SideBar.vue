@@ -94,7 +94,7 @@ export default {
   opacity: .4;
 }
 
-@media only screen and (max-width: 1264px) {
+@media only screen and (max-width: 960px) {
   .menu__list {
     margin-top: 60px;
     // display: flex;

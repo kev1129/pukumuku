@@ -49,6 +49,6 @@
 }
 .data_text {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 </style>
