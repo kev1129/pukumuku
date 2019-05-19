@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .base_title {
-  font-family: 'Francois+One';
+  font-family: 'Francois One';
   font-weight: 1000;
   letter-spacing: 0.15rem;
   font-size: 3rem;
