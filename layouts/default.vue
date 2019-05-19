@@ -25,8 +25,8 @@ export default {
 
 <style lang="scss">
 /* color */
-// #ec1810
-
+// red #ec1810
+// yellow color: #ffff00;
 /* common */
 .v-content__wrap {
   width: none;

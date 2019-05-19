@@ -7,22 +7,24 @@
           <p class="sidebar__icon_title site-title"><strong>{{siteTitle}}</strong><br>Since 1999</p>
         </v-flex>
       </v-layout>
-      <v-container fluid grid-list-sm>
-        <v-layout column class="menu__list">
-          <v-flex
-            v-for="(item, index) in menu"
-            v-bind:key="index"
-            class="menu"
-          >
-            <nuxt-link :to="item.link" class="menu__item">{{item.title}}</nuxt-link>
-          </v-flex>
-        </v-layout>
-        <v-layout align-center justify-center column>
-          <v-flex>
-          <a href="https://www.instagram.com/pankouboupukumuku/" class="instagram" target="_blank"><i class="fab fa-instagram"></i> Follow instagram</a>
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <div class="menu__list">
+        <v-container fluid grid-list-sm>
+          <v-layout column>
+            <v-flex
+              v-for="(item, index) in menu"
+              v-bind:key="index"
+              class="menu"
+            >
+              <nuxt-link :to="item.link" class="menu__item">{{item.title}}</nuxt-link>
+            </v-flex>
+          </v-layout>
+          <v-layout align-center justify-center column>
+            <v-flex>
+            <a href="https://www.instagram.com/pankouboupukumuku/" class="instagram" target="_blank"><i class="fab fa-instagram"></i> Follow instagram</a>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
     </div>
   </v-container>
 </template>
@@ -67,7 +69,9 @@ export default {
   font-family: 'Francois One';
   font-size: 1.5rem;
   .menu__item {
-    color: #000;
+    // color: #000;
+    color: #ec1810;
+
     text-decoration: none;
 
   }
@@ -77,7 +81,7 @@ export default {
 }
 .instagram {
   display: block;
-  color: #000;
+  color:#ec1810;
   margin-top: 18px;
   font-family: 'Francois One';
   text-decoration: none;
@@ -89,4 +93,20 @@ export default {
 .instagram:hover {
   opacity: .4;
 }
+
+@media only screen and (max-width: 1264px) {
+  .menu__list {
+    margin-top: 60px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+  .menu {
+    margin-top: 20px;
+  }
+  .instagram {
+    margin-top: 30px;
+  }
+}
+
 </style>

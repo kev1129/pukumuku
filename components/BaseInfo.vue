@@ -6,8 +6,8 @@
     hide-headers
   >
     <template v-slot:items="props">
-      <td class="text-xs-left">{{ props.item.name }}</td>
-      <td class="text-xs-left">{{ props.item.info }}</td>
+      <td class="text-xs-left data_text">{{ props.item.name }}</td>
+      <td class="text-xs-left data_text">{{ props.item.info }}</td>
     </template>
   </v-data-table>
 </template>
@@ -44,7 +44,11 @@
 </script>
 
 <style lang="scss" scoped>
-// .data {
-//   max-width: 500px;
-// }
+.data {
+  // border: 1px solid #000;
+}
+.data_text {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 </style>
